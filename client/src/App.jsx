@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <SharedSiteLayout />,
     children: [
       {
-        path: "Landing",
+        index: true,
         element: <Landing />,
       },
       {
