@@ -1,5 +1,16 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import SharedSiteLayout from "./pages/SharedSiteLayout";
+
+import {
+  AboutUs,
+  Adventure,
+  Contact,
+  Culture,
+  Landing,
+  Pricing,
+  Relax,
+  SharedSiteLayout,
+  Visit,
+} from "./pages";
 
 const router = createBrowserRouter([
   {
