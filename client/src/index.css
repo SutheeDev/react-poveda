@@ -52,3 +52,7 @@ html {
   --font-2: "Poppins", sans-serif;
   --font-3: sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
