@@ -3,14 +3,23 @@ import styled from "styled-components";
 
 const Logo = () => {
   return (
-    <div>
+    <Wrapper>
       <Link className="logo" to="/">
         poveda
       </Link>
-    </div>
+    </Wrapper>
   );
 };
 
 export default Logo;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  .logo {
+    font-family: var(--font-1);
+    color: var(--white);
+    text-transform: uppercase;
+    background-color: transparent;
+    font-size: 1.3rem;
+    padding: 0.5em;
+  }
+`;

@@ -53,6 +53,11 @@ html {
   --font-3: sans-serif;
 }
 
+body {
+  font-family: var(--font-2);
+  background-color: var(--grey);
+}
+
 a {
   text-decoration: none;
 }
