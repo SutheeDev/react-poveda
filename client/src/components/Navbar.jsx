@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 import { BiMenu } from "react-icons/bi";
 import { BiX } from "react-icons/bi";
 import { BiSolidDownArrow } from "react-icons/bi";
+import styled from "styled-components";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
     <nav>
-      <div className="logo-container">
-        <Link className="logo" to="/">
-          poveda
-        </Link>
-      </div>
+      <Logo />
       <div className="navlinks-container">
         <div className="navlinks">
           <Link className="link" to="/">
