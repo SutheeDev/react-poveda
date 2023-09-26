@@ -7,7 +7,7 @@ import Logo from "./Logo";
 
 const Navbar = () => {
   return (
-    <nav>
+    <Wrapper>
       <Logo />
       <div className="navlinks-container">
         <div className="navlinks">
@@ -39,9 +39,37 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </Wrapper>
   );
 };
 export default Navbar;
 
-const Wrapper = styled.nav``;
+const Wrapper = styled.nav`
+  background-color: var(--green-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .navlinks-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  .navlinks {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: var(--green-1);
+  }
+  .hamburger-menu-container {
+    display: grid;
+    place-items: center;
+  }
+  .hamburger-open,
+  .hamburger-close {
+    color: var(--white);
+    font-size: 1.5rem;
+    grid-area: 1/1;
+    display: flex;
+  }
+`;
