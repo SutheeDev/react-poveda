@@ -49,7 +49,8 @@ const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.3em 0.5em;
+  padding: 1.3em 1em;
+  height: 75px;
   .navlinks-container {
     display: flex;
     justify-content: space-between;
@@ -58,9 +59,22 @@ const Wrapper = styled.nav`
   }
   .navlinks {
     position: absolute;
-    top: 80px;
+    top: 75px;
     right: 0;
     background-color: var(--green-1);
+  }
+  .link {
+    color: var(--white);
+    text-transform: uppercase;
+  }
+  .visit-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .arrow-down {
+    color: var(--white);
+    display: flex;
   }
   .hamburger-menu-container {
     display: grid;
