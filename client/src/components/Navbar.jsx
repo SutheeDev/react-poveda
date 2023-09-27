@@ -45,10 +45,11 @@ const Navbar = () => {
 export default Navbar;
 
 const Wrapper = styled.nav`
-  background-color: var(--green-1);
+  background-color: var(--green-2);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.3em 0.5em;
   .navlinks-container {
     display: flex;
     justify-content: space-between;
@@ -68,7 +69,7 @@ const Wrapper = styled.nav`
   .hamburger-open,
   .hamburger-close {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 2rem;
     grid-area: 1/1;
     display: flex;
   }
