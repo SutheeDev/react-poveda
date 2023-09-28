@@ -22,4 +22,10 @@ const Wrapper = styled.div`
     font-size: 1.3rem;
     padding-left: var(--side-padding);
   }
+  @media screen and (min-width: 900px) {
+    .logo {
+      font-size: 2.2rem;
+      letter-spacing: 1.5px;
+    }
+  }
 `;

@@ -56,6 +56,9 @@ html {
   /* padding */
   --side-padding: 4vw;
   --max-width: calc(100vw - var(--side-padding));
+
+  /* border-radius */
+  --border-radius: 5px;
 }
 
 body {

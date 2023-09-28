@@ -113,4 +113,37 @@ const Wrapper = styled.nav`
     grid-area: 1/1;
     display: flex;
   }
+
+  @media screen and (min-width: 900px) {
+    height: 100px;
+    .hamburger-menu-container {
+      display: none;
+    }
+    .navlinks {
+      width: 100%;
+      position: relative;
+      top: 0;
+      text-align: right;
+      flex-direction: row;
+    }
+
+    .visit-subMenu {
+      position: absolute;
+      top: 67px;
+      left: 27%;
+    }
+    .subLink-container {
+      width: 100%;
+      padding: 0.9em var(--side-padding);
+      border-radius: var(--border-radius);
+      background-color: var(--green-2);
+      align-items: flex-start;
+    }
+    .sub-link {
+      padding-right: 0;
+    }
+    .link {
+      font-size: 0.875rem;
+    }
+  }
 `;
