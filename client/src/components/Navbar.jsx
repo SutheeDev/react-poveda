@@ -21,7 +21,19 @@ const Navbar = () => {
             <div className="arrow-down">
               <BiSolidDownArrow />
             </div>
-            <div className="visit-icon"></div>
+          </div>
+          <div className="visit-subMenu">
+            <div className="subLink-container">
+              <Link className="link sub-link" to="/">
+                adventure
+              </Link>
+              <Link className="link sub-link" to="/">
+                culture
+              </Link>
+              <Link className="link sub-link" to="/">
+                relax
+              </Link>
+            </div>
           </div>
           <Link className="link" to="/">
             pricing
@@ -49,7 +61,6 @@ const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.3em 1em;
   height: 75px;
   .navlinks-container {
     display: flex;
@@ -58,27 +69,42 @@ const Wrapper = styled.nav`
     position: relative;
   }
   .navlinks {
+    width: 100vw;
     position: absolute;
-    top: 75px;
+    top: 53px;
     right: 0;
-    background-color: var(--green-1);
+    background-color: var(--green-2);
+    text-align: right;
+    display: flex;
+    flex-direction: column;
   }
   .link {
     color: var(--white);
     text-transform: uppercase;
+    padding: 0.9em 0;
+    padding-right: var(--side-padding);
   }
   .visit-container {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
-    gap: 0.5em;
   }
   .arrow-down {
     color: var(--white);
     display: flex;
+    font-size: 0.8rem;
+    margin-right: 0.6em;
+  }
+  .subLink-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--green-4);
   }
   .hamburger-menu-container {
     display: grid;
     place-items: center;
+    padding-right: var(--side-padding);
   }
   .hamburger-open,
   .hamburger-close {

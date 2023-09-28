@@ -46,11 +46,16 @@ html {
   --green-1: #2e3a2a;
   --green-2: #485342;
   --green-3: #5c6756;
+  --green-4: #6b7665;
 
   /* Fonts */
   --font-1: "Jacques Francois", serif;
   --font-2: "Poppins", sans-serif;
   --font-3: sans-serif;
+
+  /* padding */
+  --side-padding: 4vw;
+  --max-width: calc(100vw - var(--side-padding));
 }
 
 body {
