@@ -22,11 +22,16 @@ const Navbar = () => {
             <Link className="link" to="/">
               visit
             </Link>
-            <div className="arrow-down">
+            <div
+              className="arrow-down"
+              onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+            >
               <BiSolidDownArrow />
             </div>
           </div>
-          <div className="visit-subMenu">
+          <div
+            className={isSubMenuOpen ? "visit-subMenu open" : "visit-subMenu"}
+          >
             <div className="subLink-container">
               <Link className="link sub-link" to="/">
                 adventure
@@ -111,6 +116,11 @@ const Wrapper = styled.nav`
     position: relative;
     z-index: -2;
     margin-top: -142px;
+
+    transition: var(--global-transition);
+  }
+  .visit-subMenu.open {
+    margin-top: 0;
   }
   .subLink-container {
     width: 100vw;
