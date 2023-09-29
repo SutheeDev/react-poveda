@@ -62,6 +62,7 @@ const Wrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 75px;
+  box-shadow: var(--navbar-shadow);
   .navlinks-container {
     display: flex;
     justify-content: space-between;
@@ -77,6 +78,7 @@ const Wrapper = styled.nav`
     text-align: right;
     display: flex;
     flex-direction: column;
+    /* display: none; */
   }
   .link {
     color: var(--white);
