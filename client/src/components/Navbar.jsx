@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { BiX } from "react-icons/bi";
@@ -6,12 +7,15 @@ import styled from "styled-components";
 import Logo from "./Logo";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+
   return (
     <Wrapper>
       <Logo />
       <div className="navlinks-container">
         <div className="navlinks">
-          <Link className="link" to="/">
+          <Link className="link about-us" to="/">
             about us
           </Link>
           <div className="visit-container">
@@ -74,19 +78,25 @@ const Wrapper = styled.nav`
     position: absolute;
     top: 53px;
     right: 0;
-    background-color: var(--green-2);
     text-align: right;
     display: flex;
     flex-direction: column;
+
     /* display: none; */
+    z-index: -1;
   }
   .link {
     color: var(--white);
     text-transform: uppercase;
     padding: 0.9em 0;
     padding-right: var(--side-padding);
+    background-color: var(--green-2);
+  }
+  .sub-link {
+    background-color: var(--green-4);
   }
   .visit-container {
+    background-color: var(--green-2);
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -96,6 +106,11 @@ const Wrapper = styled.nav`
     display: flex;
     font-size: 0.8rem;
     margin-right: 0.6em;
+  }
+  .visit-subMenu {
+    position: relative;
+    z-index: -2;
+    margin-top: -142px;
   }
   .subLink-container {
     width: 100vw;
@@ -127,12 +142,15 @@ const Wrapper = styled.nav`
       top: 0;
       text-align: right;
       flex-direction: row;
+
+      z-index: 1;
     }
 
     .visit-subMenu {
       position: absolute;
       top: 67px;
       left: 27%;
+      margin-top: 0;
     }
     .subLink-container {
       width: 100%;
@@ -143,6 +161,7 @@ const Wrapper = styled.nav`
     }
     .sub-link {
       padding-right: 0;
+      background-color: var(--green-2);
     }
     .link {
       font-size: 0.875rem;
