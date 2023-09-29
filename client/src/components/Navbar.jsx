@@ -10,11 +10,16 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
+  const closeAll = () => {
+    setIsMenuOpen(false);
+    setIsSubMenuOpen(false);
+  };
+
   return (
     <Wrapper>
       <Logo />
       <div className="navlinks-container">
-        <div className="navlinks">
+        <div className={isMenuOpen ? "navlinks show" : "navlinks"}>
           <Link className="link about-us" to="/">
             about us
           </Link>
@@ -47,17 +52,20 @@ const Navbar = () => {
           <Link className="link" to="/">
             pricing
           </Link>
-          <Link className="link" to="/">
+          <Link className={isMenuOpen ? "link alter-shadow" : "link"} to="/">
             contact
           </Link>
         </div>
         <div className="hamburger-menu-container">
-          <div className="hamburger-open">
-            <BiMenu />
-          </div>
-          <div className="hamburger-close">
-            <BiX />
-          </div>
+          {isMenuOpen ? (
+            <div className="hamburger-close" onClick={() => closeAll()}>
+              <BiX />
+            </div>
+          ) : (
+            <div className="hamburger-open" onClick={() => setIsMenuOpen(true)}>
+              <BiMenu />
+            </div>
+          )}
         </div>
       </div>
     </Wrapper>
@@ -72,11 +80,14 @@ const Wrapper = styled.nav`
   align-items: center;
   height: 75px;
   box-shadow: var(--navbar-shadow);
+
   .navlinks-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    /* margin-top: -50px; */
   }
   .navlinks {
     width: 100vw;
@@ -87,8 +98,12 @@ const Wrapper = styled.nav`
     display: flex;
     flex-direction: column;
 
-    /* display: none; */
     z-index: -1;
+    margin-top: -190px;
+    transition: var(--global-transition);
+  }
+  .navlinks.show {
+    margin-top: 0;
   }
   .link {
     color: var(--white);
@@ -111,6 +126,7 @@ const Wrapper = styled.nav`
     display: flex;
     font-size: 0.8rem;
     margin-right: 0.6em;
+    cursor: pointer;
   }
   .visit-subMenu {
     position: relative;
@@ -139,8 +155,11 @@ const Wrapper = styled.nav`
     font-size: 2rem;
     grid-area: 1/1;
     display: flex;
+    cursor: pointer;
   }
-
+  .link.alter-shadow {
+    box-shadow: var(--navbar-shadow);
+  }
   @media screen and (min-width: 900px) {
     height: 100px;
     .hamburger-menu-container {
@@ -154,8 +173,8 @@ const Wrapper = styled.nav`
       flex-direction: row;
 
       z-index: 1;
+      margin-top: 0;
     }
-
     .visit-subMenu {
       position: absolute;
       top: 67px;
@@ -175,6 +194,9 @@ const Wrapper = styled.nav`
     }
     .link {
       font-size: 0.875rem;
+    }
+    .link.alter-shadow {
+      box-shadow: none;
     }
   }
 `;
