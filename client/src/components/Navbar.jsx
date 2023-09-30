@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { BiX } from "react-icons/bi";
@@ -14,6 +14,19 @@ const Navbar = () => {
     setIsMenuOpen(false);
     setIsSubMenuOpen(false);
   };
+
+  const handleScroll = () => {
+    closeAll();
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", closeAll);
+    window.addEventListener("resize", closeAll);
+    return () => {
+      window.removeEventListener("scroll", closeAll);
+      window.removeEventListener("resize", closeAll);
+    };
+  }, []);
 
   return (
     <Wrapper>
