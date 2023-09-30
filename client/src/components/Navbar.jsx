@@ -49,7 +49,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <Link className="link" to="/">
+          <Link className="link pricing" to="/">
             pricing
           </Link>
           <Link className={isMenuOpen ? "link alter-shadow" : "link"} to="/">
@@ -180,6 +180,9 @@ const Wrapper = styled.nav`
       top: 67px;
       left: 27%;
       margin-top: 0;
+      /* opacity: 0; */
+
+      transition: var(--global-transition);
     }
     .subLink-container {
       width: 100%;
@@ -187,6 +190,23 @@ const Wrapper = styled.nav`
       border-radius: var(--border-radius);
       background-color: var(--green-2);
       align-items: flex-start;
+    }
+    .visit-container {
+      flex-direction: row;
+      .link {
+        padding-right: 0;
+      }
+      .arrow-down {
+        font-size: 0.8rem;
+        margin-left: 0.6em;
+        margin-right: 0;
+      }
+    }
+    .visit-container:hover .visit-subMenu {
+      background-color: wheat;
+    }
+    .pricing {
+      padding-left: var(--side-padding);
     }
     .sub-link {
       padding-right: 0;
