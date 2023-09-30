@@ -38,13 +38,13 @@ const Navbar = () => {
             className={isSubMenuOpen ? "visit-subMenu open" : "visit-subMenu"}
           >
             <div className="subLink-container">
-              <Link className="link sub-link" to="/">
+              <Link className="link sub-link" to="/adventure">
                 adventure
               </Link>
-              <Link className="link sub-link" to="/">
+              <Link className="link sub-link" to="/culture">
                 culture
               </Link>
-              <Link className="link sub-link" to="/">
+              <Link className="link sub-link" to="/relax">
                 relax
               </Link>
             </div>
@@ -86,8 +86,6 @@ const Wrapper = styled.nav`
     justify-content: space-between;
     align-items: center;
     position: relative;
-
-    /* margin-top: -50px; */
   }
   .navlinks {
     width: 100vw;
@@ -177,10 +175,11 @@ const Wrapper = styled.nav`
     }
     .visit-subMenu {
       position: absolute;
-      top: 67px;
+      top: 47px;
       left: 27%;
       margin-top: 0;
-      /* opacity: 0; */
+      opacity: 0;
+      z-index: -99;
 
       transition: var(--global-transition);
     }
@@ -202,8 +201,10 @@ const Wrapper = styled.nav`
         margin-right: 0;
       }
     }
-    .visit-container:hover .visit-subMenu {
-      background-color: wheat;
+    .visit-subMenu.open {
+      opacity: 1;
+      z-index: 5;
+      top: 67px;
     }
     .pricing {
       padding-left: var(--side-padding);
