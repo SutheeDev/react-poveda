@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
 
   const closeAll = () => {
@@ -95,7 +95,7 @@ const Wrapper = styled.nav`
   background-color: var(--green-2);
   box-shadow: var(--navbar-shadow);
   .main-container {
-    padding: 1em 1.5em;
+    padding: 1.6em 1.5em;
 
     /* Separate Logo and everything else */
     display: flex;
@@ -108,8 +108,37 @@ const Wrapper = styled.nav`
     /* Switch the order and get hamburger menu above the rest of links */
     display: flex;
     flex-direction: column-reverse;
+    /* Push everything to the right including Hamburger menu */
+    align-items: flex-end;
   }
+  .navlinks {
+    /* Hide all links when isMenuOpen is false */
+    position: relative;
+    z-index: -1;
+    margin-top: -110px;
+    opacity: 0;
 
+    transition: var(--global-transition);
+  }
+  .navlinks.show {
+    /* Show all links when isMenuOpen is true */
+    margin-top: 0;
+    z-index: 1;
+    opacity: 1;
+  }
+  .hamburger-menu-container {
+    width: fit-content;
+  }
+  .hamburger-open,
+  .hamburger-close {
+    color: var(--white);
+    font-size: 2rem;
+    display: flex;
+    cursor: pointer;
+    /* Push hamberger icons to the top-right edge */
+    margin-right: -8px;
+    margin-top: -5px;
+  }
   @media screen and (min-width: 950px) {
     background-color: transparent;
     box-shadow: none;
@@ -119,6 +148,11 @@ const Wrapper = styled.nav`
     }
     .navlinks-container {
       flex-direction: row;
+    }
+
+    /* Hide hamburger on big screen */
+    .hamburger-menu-container {
+      display: none;
     }
   }
 `;
