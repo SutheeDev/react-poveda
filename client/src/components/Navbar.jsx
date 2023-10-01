@@ -125,7 +125,8 @@ const Wrapper = styled.nav`
 
     transition: var(--global-transition);
   }
-  .navlinks .link {
+  .navlinks .link,
+  .navlinks .arrow-down {
     color: var(--green-2);
   }
   .navlinks.show {
@@ -134,7 +135,8 @@ const Wrapper = styled.nav`
     z-index: 1;
     opacity: 1;
   }
-  .navlinks.show .link {
+  .navlinks.show .link,
+  .navlinks.show .arrow-down {
     color: var(--white);
   }
   .hamburger-menu-container {
@@ -153,6 +155,7 @@ const Wrapper = styled.nav`
   .link {
     text-transform: uppercase;
   }
+  /* visit-container flex layout */
   .visit-container {
     display: flex;
     flex-direction: row-reverse;
@@ -161,7 +164,6 @@ const Wrapper = styled.nav`
   }
   .arrow-down {
     display: flex;
-    color: var(--white);
     font-size: 0.7rem;
   }
   @media screen and (min-width: 950px) {
