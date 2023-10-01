@@ -119,8 +119,7 @@ const Wrapper = styled.nav`
     /* Hide all links when isMenuOpen is false */
     position: relative;
     z-index: -1;
-    margin-top: -110px;
-    margin-top: -16em;
+    margin-top: -15em;
     opacity: 0;
 
     transition: var(--global-transition);
@@ -179,6 +178,14 @@ const Wrapper = styled.nav`
     .navlinks {
       flex-direction: row;
       padding-top: 0;
+      /* Reset and display navlinks no matter isMenuOpen is true or false */
+      margin-top: 0;
+      z-index: 1;
+      opacity: 1;
+    }
+    .navlinks .link,
+    .navlinks .arrow-down {
+      color: var(--white);
     }
     /* Hide hamburger on big screen */
     .hamburger-menu-container {
