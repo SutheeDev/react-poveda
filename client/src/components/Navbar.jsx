@@ -153,6 +153,17 @@ const Wrapper = styled.nav`
   .link {
     text-transform: uppercase;
   }
+  .visit-container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.6em;
+    align-items: center;
+  }
+  .arrow-down {
+    display: flex;
+    color: var(--white);
+    font-size: 0.7rem;
+  }
   @media screen and (min-width: 950px) {
     background-color: transparent;
     box-shadow: none;
@@ -173,6 +184,9 @@ const Wrapper = styled.nav`
     }
     .link {
       font-size: 0.875rem;
+    }
+    .visit-container {
+      flex-direction: row;
     }
   }
 `;
