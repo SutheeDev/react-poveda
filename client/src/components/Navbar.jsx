@@ -112,19 +112,30 @@ const Wrapper = styled.nav`
     align-items: flex-end;
   }
   .navlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding-top: 2em;
     /* Hide all links when isMenuOpen is false */
     position: relative;
     z-index: -1;
     margin-top: -110px;
+    margin-top: -16em;
     opacity: 0;
 
     transition: var(--global-transition);
+  }
+  .navlinks .link {
+    color: var(--green-2);
   }
   .navlinks.show {
     /* Show all links when isMenuOpen is true */
     margin-top: 0;
     z-index: 1;
     opacity: 1;
+  }
+  .navlinks.show .link {
+    color: var(--white);
   }
   .hamburger-menu-container {
     width: fit-content;
@@ -139,6 +150,9 @@ const Wrapper = styled.nav`
     margin-right: -8px;
     margin-top: -5px;
   }
+  .link {
+    text-transform: uppercase;
+  }
   @media screen and (min-width: 950px) {
     background-color: transparent;
     box-shadow: none;
@@ -149,10 +163,16 @@ const Wrapper = styled.nav`
     .navlinks-container {
       flex-direction: row;
     }
-
+    .navlinks {
+      flex-direction: row;
+      padding-top: 0;
+    }
     /* Hide hamburger on big screen */
     .hamburger-menu-container {
       display: none;
+    }
+    .link {
+      font-size: 0.875rem;
     }
   }
 `;
