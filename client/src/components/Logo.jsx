@@ -20,7 +20,6 @@ const Wrapper = styled.div`
     text-transform: uppercase;
     background-color: transparent;
     font-size: 1.3rem;
-    padding-left: var(--side-padding);
   }
   @media screen and (min-width: 900px) {
     .logo {
