@@ -91,4 +91,10 @@ const Navbar = () => {
 };
 export default Navbar;
 
-const Wrapper = styled.nav``;
+const Wrapper = styled.nav`
+  background-color: var(--green-2);
+
+  @media screen and (min-width: 950px) {
+    background-color: transparent;
+  }
+`;
