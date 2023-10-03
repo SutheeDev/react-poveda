@@ -38,32 +38,39 @@ const Navbar = () => {
               about us
             </Link>
             <div className="visit-container">
-              <Link className="link" to="/">
-                visit
-              </Link>
+              <div className="linkToVisit">
+                <Link className="link" to="/">
+                  visit
+                </Link>
+                <div
+                  className="arrow-down"
+                  onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                >
+                  <BiSolidDownArrow />
+                </div>
+              </div>
               <div
-                className="arrow-down"
-                onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+                className={
+                  isSubMenuOpen ? "visit-subMenu open" : "visit-subMenu"
+                }
               >
-                <BiSolidDownArrow />
+                <div className="subLink-container">
+                  <Link className="link sub-link" to="/adventure">
+                    adventure
+                  </Link>
+                  <Link className="link sub-link" to="/culture">
+                    culture
+                  </Link>
+                  <Link className="link sub-link" to="/relax">
+                    relax
+                  </Link>
+                </div>
               </div>
             </div>
-            <div
-              className={isSubMenuOpen ? "visit-subMenu open" : "visit-subMenu"}
+            <Link
+              className={isSubMenuOpen ? "link pricing extend" : "link pricing"}
+              to="/"
             >
-              <div className="subLink-container">
-                <Link className="link sub-link" to="/adventure">
-                  adventure
-                </Link>
-                <Link className="link sub-link" to="/culture">
-                  culture
-                </Link>
-                <Link className="link sub-link" to="/relax">
-                  relax
-                </Link>
-              </div>
-            </div>
-            <Link className="link pricing" to="/">
               pricing
             </Link>
             <Link className={isMenuOpen ? "link alter-shadow" : "link"} to="/">
@@ -119,7 +126,7 @@ const Wrapper = styled.nav`
     /* Hide all links when isMenuOpen is false */
     position: relative;
     z-index: -1;
-    margin-top: -15em;
+    margin-top: -12em;
     opacity: 0;
 
     transition: var(--global-transition);
@@ -158,12 +165,53 @@ const Wrapper = styled.nav`
   .visit-container {
     display: flex;
     flex-direction: row-reverse;
+    flex-direction: column;
+    gap: 0.6em;
+    gap: 1.5em;
+    /* align-items: center; */
+
+    position: relative;
+  }
+  .linkToVisit {
+    display: flex;
+    flex-direction: row-reverse;
     gap: 0.6em;
     align-items: center;
   }
   .arrow-down {
     display: flex;
     font-size: 0.7rem;
+    cursor: pointer;
+  }
+  .visit-subMenu {
+    background-color: var(--green-4);
+
+    position: absolute;
+    top: 29.5px;
+    right: -1.5em;
+    padding: 0.8em 1.5em 0.8em 0;
+    width: 100vw;
+    z-index: -1;
+    display: none;
+  }
+  .visit-subMenu.open {
+    display: block;
+  }
+  .subLink-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .sub-link {
+    background-color: var(--green-4);
+  }
+  .pricing {
+    margin-top: 0;
+
+    transition: var(--global-transition);
+  }
+  .pricing.extend {
+    margin-top: 130px;
   }
   @media screen and (min-width: 950px) {
     background-color: transparent;
@@ -195,7 +243,27 @@ const Wrapper = styled.nav`
       font-size: 0.875rem;
     }
     .visit-container {
+      /* flex-direction: row; */
+    }
+    .linkToVisit {
       flex-direction: row;
+    }
+    .visit-subMenu {
+      background-color: var(--green-4);
+
+      position: absolute;
+      top: 40px;
+      right: -90px;
+      width: 147px;
+      padding: 0.8em 1.5em 0.8em 1.5em;
+      border-radius: var(--border-radius);
+    }
+    .subLink-container {
+      justify-content: flex-start;
+      text-align: left;
+    }
+    .pricing {
+      margin-top: 0;
     }
   }
 `;
