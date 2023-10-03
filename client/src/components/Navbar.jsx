@@ -114,6 +114,8 @@ export default Navbar;
 const Wrapper = styled.nav`
   background-color: var(--green-2);
   box-shadow: var(--navbar-shadow);
+  position: fixed;
+  width: 100%;
   .main-container {
     padding: 1.6em 1.5em;
 
