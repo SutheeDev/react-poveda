@@ -21,7 +21,7 @@ const Wrapper = styled.div`
     background-color: transparent;
     font-size: 1.3rem;
   }
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 950px) {
     .logo {
       font-size: 2.2rem;
       letter-spacing: 1.5px;
