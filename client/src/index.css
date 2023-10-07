@@ -46,9 +46,33 @@ html {
   --green-1: #2e3a2a;
   --green-2: #485342;
   --green-3: #5c6756;
+  --green-4: #6b7665;
 
   /* Fonts */
   --font-1: "Jacques Francois", serif;
   --font-2: "Poppins", sans-serif;
   --font-3: sans-serif;
+
+  /* padding */
+  --side-padding: 4vw;
+  --max-width: calc(100vw - var(--side-padding));
+
+  /* border-radius */
+  --border-radius: 5px;
+
+  /* Shadows */
+  --navbar-shadow: 0px 0.9px 1.3px rgba(0, 0, 0, 0.069),
+    0px 2.9px 4.5px rgba(0, 0, 0, 0.101), 0px 13px 20px rgba(0, 0, 0, 0.17);
+
+  /* Transition */
+  --global-transition: all 0.15s ease;
+}
+
+body {
+  font-family: var(--font-2);
+  background-color: var(--grey);
+}
+
+a {
+  text-decoration: none;
 }

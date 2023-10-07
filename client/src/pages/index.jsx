@@ -1,0 +1,9 @@
+export { default as SharedSiteLayout } from "./SharedSiteLayout";
+export { default as AboutUs } from "./AboutUs";
+export { default as Adventure } from "./Adventure";
+export { default as Contact } from "./Contact";
+export { default as Culture } from "./Culture";
+export { default as Landing } from "./Landing";
+export { default as Pricing } from "./Pricng";
+export { default as Relax } from "./Relax";
+export { default as Visit } from "./Visit";
