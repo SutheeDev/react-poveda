@@ -136,6 +136,7 @@ const Wrapper = styled.nav`
   .navlinks {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 1.5em;
     padding-top: 2em;
     /* Hide all links when isMenuOpen is false */
@@ -177,6 +178,12 @@ const Wrapper = styled.nav`
   }
   .link {
     text-transform: uppercase;
+    padding-bottom: 0.15em;
+    border-bottom: 1px solid transparent;
+    width: fit-content;
+  }
+  .link:hover {
+    border-bottom: 1px solid var(--white);
   }
   /* visit-container flex layout */
   .visit-container {
@@ -187,6 +194,7 @@ const Wrapper = styled.nav`
     position: relative;
   }
   .linkToVisit {
+    /* background-color: wheat; */
     display: flex;
     flex-direction: row-reverse;
     gap: 0.6em;
@@ -196,6 +204,7 @@ const Wrapper = styled.nav`
     display: flex;
     font-size: 0.7rem;
     cursor: pointer;
+    margin-bottom: 4px;
   }
   .visit-subMenu {
     background-color: var(--green-4);
@@ -214,6 +223,8 @@ const Wrapper = styled.nav`
   .subLink-container {
     display: flex;
     flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
     gap: 1.5em;
   }
   .sub-link {
@@ -242,7 +253,7 @@ const Wrapper = styled.nav`
       padding-top: 0;
       gap: 3em;
       /* Reset and display navlinks no matter isMenuOpen is true or false */
-      margin-top: -12em;
+      margin-top: 0;
       z-index: 1;
       opacity: 1;
     }
@@ -277,6 +288,7 @@ const Wrapper = styled.nav`
     }
     .subLink-container {
       justify-content: flex-start;
+      align-items: flex-start;
       text-align: left;
     }
     .pricing.extend {
