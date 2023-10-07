@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { Hero } from "../components";
 
 const AboutUs = () => {
   return (
     <Wrapper>
-      <h1>About us</h1>
+      <Hero />
     </Wrapper>
   );
 };
