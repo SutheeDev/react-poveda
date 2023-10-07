@@ -144,7 +144,7 @@ const Wrapper = styled.nav`
     margin-top: -12em;
     opacity: 0;
 
-    transition: var(--global-transition);
+    /* transition: var(--global-transition); */
   }
   .navlinks .link,
   .navlinks .arrow-down {
@@ -240,7 +240,7 @@ const Wrapper = styled.nav`
       padding-top: 0;
       gap: 3em;
       /* Reset and display navlinks no matter isMenuOpen is true or false */
-      margin-top: 0;
+      margin-top: -12em;
       z-index: 1;
       opacity: 1;
     }
@@ -254,9 +254,6 @@ const Wrapper = styled.nav`
     }
     .link {
       font-size: 0.875rem;
-    }
-    .visit-container {
-      /* flex-direction: row; */
     }
     .linkToVisit {
       flex-direction: row;
