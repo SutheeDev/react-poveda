@@ -149,6 +149,8 @@ const Wrapper = styled.nav`
   .navlinks .link,
   .navlinks .arrow-down {
     color: var(--green-2);
+
+    transition: var(--global-transition);
   }
   .navlinks.show {
     /* Show all links when isMenuOpen is true */
