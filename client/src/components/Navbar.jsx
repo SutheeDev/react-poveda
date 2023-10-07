@@ -46,12 +46,17 @@ const Navbar = () => {
             <NavLink
               className={({ isActive }) => (isActive ? "link active" : "link")}
               to="/aboutus"
+              onClick={() => closeAll()}
             >
               about us
             </NavLink>
             <div className="visit-container" ref={containerRef}>
               <div className="linkToVisit">
-                <NavLink className="link" to="/visit">
+                <NavLink
+                  className="link"
+                  to="/visit"
+                  onClick={() => closeAll()}
+                >
                   visit
                 </NavLink>
                 <div
@@ -67,13 +72,25 @@ const Navbar = () => {
                 }
               >
                 <div className="subLink-container">
-                  <NavLink className="link sub-link" to="/adventure">
+                  <NavLink
+                    className="link sub-link"
+                    to="/adventure"
+                    onClick={() => closeAll()}
+                  >
                     adventure
                   </NavLink>
-                  <NavLink className="link sub-link" to="/culture">
+                  <NavLink
+                    className="link sub-link"
+                    to="/culture"
+                    onClick={() => closeAll()}
+                  >
                     culture
                   </NavLink>
-                  <NavLink className="link sub-link" to="/relax">
+                  <NavLink
+                    className="link sub-link"
+                    to="/relax"
+                    onClick={() => closeAll()}
+                  >
                     relax
                   </NavLink>
                 </div>
@@ -82,10 +99,11 @@ const Navbar = () => {
             <NavLink
               className={isSubMenuOpen ? "link pricing extend" : "link pricing"}
               to="/pricing"
+              onClick={() => closeAll()}
             >
               pricing
             </NavLink>
-            <NavLink className="link" to="/contact">
+            <NavLink className="link" to="/contact" onClick={() => closeAll()}>
               contact
             </NavLink>
           </div>
