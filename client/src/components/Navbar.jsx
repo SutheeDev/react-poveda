@@ -16,10 +16,6 @@ const Navbar = () => {
     setIsSubMenuOpen(false);
   };
 
-  const handleScroll = () => {
-    closeAll();
-  };
-
   useEffect(() => {
     window.addEventListener("scroll", closeAll);
     window.addEventListener("resize", closeAll);
@@ -86,7 +82,7 @@ const Navbar = () => {
             >
               pricing
             </Link>
-            <Link className={isMenuOpen ? "link alter-shadow" : "link"} to="/">
+            <Link className="link" to="/">
               contact
             </Link>
           </div>
