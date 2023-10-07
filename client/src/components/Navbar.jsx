@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { BiX } from "react-icons/bi";
 import { BiSolidDownArrow } from "react-icons/bi";
@@ -43,14 +43,17 @@ const Navbar = () => {
         <Logo />
         <div className="navlinks-container">
           <div className={isMenuOpen ? "navlinks show" : "navlinks"}>
-            <Link className="link about-us" to="/">
+            <NavLink
+              className={({ isActive }) => (isActive ? "link active" : "link")}
+              to="/aboutus"
+            >
               about us
-            </Link>
+            </NavLink>
             <div className="visit-container" ref={containerRef}>
               <div className="linkToVisit">
-                <Link className="link" to="/">
+                <NavLink className="link" to="/visit">
                   visit
-                </Link>
+                </NavLink>
                 <div
                   className="arrow-down"
                   onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
@@ -64,27 +67,27 @@ const Navbar = () => {
                 }
               >
                 <div className="subLink-container">
-                  <Link className="link sub-link" to="/adventure">
+                  <NavLink className="link sub-link" to="/adventure">
                     adventure
-                  </Link>
-                  <Link className="link sub-link" to="/culture">
+                  </NavLink>
+                  <NavLink className="link sub-link" to="/culture">
                     culture
-                  </Link>
-                  <Link className="link sub-link" to="/relax">
+                  </NavLink>
+                  <NavLink className="link sub-link" to="/relax">
                     relax
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
-            <Link
+            <NavLink
               className={isSubMenuOpen ? "link pricing extend" : "link pricing"}
-              to="/"
+              to="/pricing"
             >
               pricing
-            </Link>
-            <Link className="link" to="/">
+            </NavLink>
+            <NavLink className="link" to="/contact">
               contact
-            </Link>
+            </NavLink>
           </div>
           <div className="hamburger-menu-container">
             {isMenuOpen ? (
@@ -178,6 +181,7 @@ const Wrapper = styled.nav`
     border-bottom: 1px solid transparent;
     width: fit-content;
   }
+  .active,
   .link:hover {
     border-bottom: 1px solid var(--white);
   }
