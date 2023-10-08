@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const containerRef = useRef(null);
 

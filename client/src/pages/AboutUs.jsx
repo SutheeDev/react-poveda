@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Hero } from "../components";
+import imgUrl from "../assets/images/HERO_02_ABOUTUS.jpg";
 
 const AboutUs = () => {
   return (
     <Wrapper>
-      <Hero />
+      <Hero text="know us" imgUrl={imgUrl} />
     </Wrapper>
   );
 };
