@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-const Hero = ({ text, imgUrl }) => {
+const Hero = ({ smText, bgText, imgUrl }) => {
   return (
     <Wrapper imgUrl={imgUrl}>
       <div className="container">
-        <h3>it's time to</h3>
-        <h1 className="lg-text">{text}</h1>
+        <h3>{smText}</h3>
+        <h1 className="lg-text">{bgText}</h1>
       </div>
     </Wrapper>
   );

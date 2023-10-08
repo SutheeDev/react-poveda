@@ -5,7 +5,7 @@ import imgUrl from "../assets/images/HERO_02_ABOUTUS.jpg";
 const AboutUs = () => {
   return (
     <Wrapper>
-      <Hero text="know us" imgUrl={imgUrl} />
+      <Hero smText={`it's time to`} bgText="know us" imgUrl={imgUrl} />
     </Wrapper>
   );
 };
