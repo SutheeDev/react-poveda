@@ -134,7 +134,7 @@ const Wrapper = styled.nav`
   position: fixed;
   width: 100%;
   .main-container {
-    padding: 1.6em 1.5em;
+    padding: 1.6em var(--side-contain-sm);
 
     /* Separate Logo and everything else */
     display: flex;
@@ -260,10 +260,10 @@ const Wrapper = styled.nav`
     background-color: transparent;
     box-shadow: none;
     .main-container {
-      padding: 1.7em 1.7em;
+      padding: 1.7em var(--side-contain-950);
       align-items: center;
 
-      max-width: 1200px;
+      max-width: var(--side-contain-max);
       margin: 0 auto;
     }
     .navlinks-container {

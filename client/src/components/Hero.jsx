@@ -3,8 +3,10 @@ import styled from "styled-components";
 const Hero = ({ text, imgUrl }) => {
   return (
     <Wrapper imgUrl={imgUrl}>
-      <h3>it's time to</h3>
-      <h1 className="lg-text">{text}</h1>
+      <div className="container">
+        <h3>it's time to</h3>
+        <h1 className="lg-text">{text}</h1>
+      </div>
     </Wrapper>
   );
 };
@@ -19,10 +21,14 @@ const Wrapper = styled.section`
   background-repeat: no-repeat;
   background-position: 0 44%;
 
-  padding: 0 1.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  .container {
+    width: 100%;
+    padding: 0 var(--side-contain-sm);
+  }
 
   .lg-text {
     font-size: 3rem;
@@ -37,5 +43,11 @@ const Wrapper = styled.section`
   @media screen and (min-width: 950px) {
     height: 590px;
     background-position: 0 60%;
+    .container {
+      padding: 0 var(--side-contain-950);
+
+      max-width: var(--side-contain-max);
+      margin: 0 auto;
+    }
   }
 `;
