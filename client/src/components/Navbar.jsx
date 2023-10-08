@@ -262,6 +262,9 @@ const Wrapper = styled.nav`
     .main-container {
       padding: 1.7em 1.7em;
       align-items: center;
+
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .navlinks-container {
       flex-direction: row;
