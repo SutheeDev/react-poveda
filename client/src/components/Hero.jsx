@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "./Button";
 
 const Hero = ({ smText, bgText, imgUrl, paragraph, height, btn }) => {
   return (
@@ -7,7 +8,7 @@ const Hero = ({ smText, bgText, imgUrl, paragraph, height, btn }) => {
         <h3>{smText}</h3>
         <h1 className="lg-text">{bgText}</h1>
         {paragraph && <p>{paragraph}</p>}
-        {btn && <button>{btn}</button>}
+        {btn && <Button text={btn} path="/aboutus" />}
       </div>
     </Wrapper>
   );
