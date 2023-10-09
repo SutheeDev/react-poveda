@@ -8,7 +8,17 @@ const Hero = ({ smText, bgText, imgUrl, paragraph, height, btn }) => {
         <h3>{smText}</h3>
         <h1 className="lg-text">{bgText}</h1>
         {paragraph && <p>{paragraph}</p>}
-        {btn && <Button text={btn} path="/aboutus" />}
+        {btn && (
+          <Button
+            text={btn}
+            path="/aboutus"
+            bgColor="transparent"
+            bdColor="var(--white)"
+            txColor="var(--white)"
+            bdColorHover="var(--grey)"
+            txColorHover="var(--grey)"
+          />
+        )}
       </div>
     </Wrapper>
   );
@@ -17,7 +27,7 @@ export default Hero;
 
 const Wrapper = styled.section`
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   height: calc(300px + ${(props) => props.height});
   background-color: wheat;
   background-image: url(${(props) => props.imgUrl});
@@ -54,19 +64,24 @@ const Wrapper = styled.section`
       font-size: clamp(4.5rem, 9vw, 9rem);
     }
     p {
-      width: 80%;
+      /* width: 100%; */
       max-width: 630px;
     }
   }
 
   @media screen and (min-width: 950px) {
-    height: 590px;
-    background-position: 0 60%;
+    min-height: 590px;
+    height: calc(590px + ${(props) => props.height});
+    background-position: 0 20%;
     .container {
       padding: 0 var(--side-contain-950);
 
       max-width: var(--side-contain-max);
       margin: 0 auto;
+    }
+    .lg-text {
+      font-size: clamp(5.5rem, 11vw, 11rem);
+      padding: 0;
     }
   }
 `;

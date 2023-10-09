@@ -13,7 +13,14 @@ const Button = ({
   type,
 }) => {
   return (
-    <Wrapper>
+    <Wrapper
+      bgColor={bgColor}
+      bdColor={bdColor}
+      txColor={txColor}
+      bgColorHover={bgColorHover}
+      bdColorHover={bdColorHover}
+      txColorHover={txColorHover}
+    >
       <Link to={path} className="btn">
         {text}
       </Link>
@@ -23,7 +30,28 @@ const Button = ({
 export default Button;
 
 const Wrapper = styled.div`
+  margin: 3em 0 0 0;
   .btn {
+    width: 100%;
+    font-family: var(--font-2);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    padding: 0.7em 2em;
     text-transform: uppercase;
+    border: 3px solid ${(props) => props.bdColor};
+    background-color: ${(props) => props.bgColor};
+    color: ${(props) => props.txColor};
+    border-radius: 35px;
+
+    transition: var(--btn-transition);
+    &:hover {
+      border: 3px solid ${(props) => props.bdColorHover};
+      color: ${(props) => props.txColorHover};
+    }
+  }
+  @media screen and (min-width: 450px) {
+    .btn {
+      padding: 0.7em 3em;
+    }
   }
 `;
