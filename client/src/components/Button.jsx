@@ -47,6 +47,7 @@ const Wrapper = styled.div`
     &:hover {
       border: 3px solid ${(props) => props.bdColorHover};
       color: ${(props) => props.txColorHover};
+      background-color: ${(props) => props.bgColorHover};
     }
   }
   @media screen and (min-width: 450px) {
