@@ -30,7 +30,6 @@ const Button = ({
 export default Button;
 
 const Wrapper = styled.div`
-  margin: 3em 0 0 0;
   .btn {
     width: 100%;
     font-family: var(--font-2);
@@ -53,6 +52,11 @@ const Wrapper = styled.div`
   @media screen and (min-width: 450px) {
     .btn {
       padding: 0.7em 3em;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .btn {
+      font-size: 1rem;
     }
   }
 `;

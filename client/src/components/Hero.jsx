@@ -57,6 +57,8 @@ const Wrapper = styled.section`
     line-height: 1.4;
     letter-spacing: 1.5px;
     width: 100%;
+
+    margin-bottom: 3em;
   }
 
   @media screen and (min-width: 450px) {
