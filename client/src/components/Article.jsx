@@ -85,6 +85,11 @@ const Wrapper = styled.article`
     display: block;
     text-align: center;
   }
+  @media screen and (min-width: 450px) {
+    .btn {
+      display: inline;
+    }
+  }
   @media screen and (min-width: 950px) {
     padding: 0 0;
     .img-title {
