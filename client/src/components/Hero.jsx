@@ -15,8 +15,9 @@ const Hero = ({ smText, bgText, imgUrl, paragraph, height, btn }) => {
             bgColor="transparent"
             bdColor="var(--white)"
             txColor="var(--white)"
-            bdColorHover="var(--grey)"
-            txColorHover="var(--grey)"
+            bdColorHover="var(--white)"
+            bgColorHover="var(--white)"
+            txColorHover="var(--green-2)"
           />
         )}
       </div>
