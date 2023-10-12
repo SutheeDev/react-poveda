@@ -3,3 +3,4 @@ export { default as Logo } from "./Logo";
 export { default as Hero } from "./Hero";
 export { default as Button } from "./Button";
 export { default as Article } from "./Article";
+export { default as Gallery } from "./Gallery";

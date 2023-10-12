@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Hero, Article } from "../components";
+import { Hero, Article, Gallery } from "../components";
 import imgUrl from "../assets/images/HERO_01_LANDING.jpg";
 import imgAr1 from "../assets/images/AR_HOME_01.jpg";
 import imgAr2 from "../assets/images/AR_HOME_02.jpg";
@@ -17,6 +17,8 @@ const Landing = () => {
         btn="our offers"
         paragraph={`Crave new adventures, mystical experiences and relaxing beaches? You need to visit Bali. We make sure that you’ll get an experience you'll never forget.`}
       />
+
+      <Gallery></Gallery>
 
       <Article
         title="a place to be"
