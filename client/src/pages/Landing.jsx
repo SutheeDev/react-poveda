@@ -3,6 +3,9 @@ import { Hero, Article, Gallery } from "../components";
 import imgUrl from "../assets/images/HERO_01_LANDING.jpg";
 import imgAr1 from "../assets/images/AR_HOME_01.jpg";
 import imgAr2 from "../assets/images/AR_HOME_02.jpg";
+import imgLi1 from "../assets/images/GL_LICENSE_01.jpg";
+import imgLi2 from "../assets/images/GL_LICENSE_02.jpg";
+import imgLi3 from "../assets/images/GL_LICENSE_03.jpg";
 
 const Landing = () => {
   const height = "225px";
@@ -26,6 +29,9 @@ const Landing = () => {
         btnText1="explore bali"
         btnText2="understand bali"
         btnText3="relax in bali"
+        img1={imgLi1}
+        img2={imgLi2}
+        img3={imgLi3}
         bgColor="var(--grey)"
       />
 

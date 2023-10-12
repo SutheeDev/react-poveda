@@ -10,15 +10,18 @@ const Gallery = ({
   btnText1,
   btnText2,
   btnText3,
+  img1,
+  img2,
+  img3,
 }) => {
   return (
     <Wrapper bgColor={bgColor}>
       <div className="container">
         <h1 className="title">{title}</h1>
         <div className="gallery-columns">
-          <GalleryColumn subTitle={subTitle1} btnText={btnText1} />
-          <GalleryColumn subTitle={subTitle2} btnText={btnText2} />
-          <GalleryColumn subTitle={subTitle3} btnText={btnText3} />
+          <GalleryColumn subTitle={subTitle1} btnText={btnText1} img={img1} />
+          <GalleryColumn subTitle={subTitle2} btnText={btnText2} img={img2} />
+          <GalleryColumn subTitle={subTitle3} btnText={btnText3} img={img3} />
         </div>
         <Button />
       </div>
@@ -29,6 +32,13 @@ export default Gallery;
 
 const Wrapper = styled.section`
   padding: 6em var(--side-contain-sm);
+  text-align: center;
+  .title {
+    color: var(--green-2);
+    margin-bottom: 1em;
+  }
+  .gallery-columns {
+  }
   @media screen and (min-width: 950px) {
     .title {
       font-size: 2.5rem;
