@@ -18,7 +18,16 @@ const Landing = () => {
         paragraph={`Crave new adventures, mystical experiences and relaxing beaches? You need to visit Bali. We make sure that you’ll get an experience you'll never forget.`}
       />
 
-      <Gallery></Gallery>
+      <Gallery
+        title="license to live"
+        subTitle1="adventure"
+        subTitle2="culture"
+        subTitle3="relaxation"
+        btnText1="explore bali"
+        btnText2="understand bali"
+        btnText3="relax in bali"
+        bgColor="var(--grey)"
+      />
 
       <Article
         title="a place to be"

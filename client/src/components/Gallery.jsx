@@ -1,17 +1,24 @@
 import styled from "styled-components";
-import { Button } from "../components";
+import { Button, GalleryColumn } from "../components";
 
-const Gallery = ({ title }) => {
+const Gallery = ({
+  title,
+  subTitle1,
+  subTitle2,
+  subTitle3,
+  bgColor,
+  btnText1,
+  btnText2,
+  btnText3,
+}) => {
   return (
-    <Wrapper>
+    <Wrapper bgColor={bgColor}>
       <div className="container">
-        <h1 className="title">Gallery</h1>
+        <h1 className="title">{title}</h1>
         <div className="gallery-columns">
-          <div className="gallery-column">
-            <img src="" alt="" />
-            <h1>Sub Title</h1>
-            <Button />
-          </div>
+          <GalleryColumn subTitle={subTitle1} btnText={btnText1} />
+          <GalleryColumn subTitle={subTitle2} btnText={btnText2} />
+          <GalleryColumn subTitle={subTitle3} btnText={btnText3} />
         </div>
         <Button />
       </div>
