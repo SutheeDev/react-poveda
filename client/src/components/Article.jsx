@@ -11,6 +11,7 @@ const Article = ({
   btnHoverColor,
   imgLeft,
   img,
+  btnText,
 }) => {
   return (
     <Wrapper
@@ -34,13 +35,13 @@ const Article = ({
           </div>
           <Button
             className="btn"
-            text="learn more"
+            text={btnText}
             bgColor="transparent"
-            bdColor="var(--green-2)"
-            txColor="var(--green-2)"
-            bgColorHover="var(--green-2)"
-            bdColorHover="var(--green-2)"
-            txColorHover="var(--white)"
+            bdColor={txColor}
+            txColor={txColor}
+            bgColorHover={txColor}
+            bdColorHover={txColor}
+            txColorHover={btnHoverColor}
           />
         </div>
       </div>
