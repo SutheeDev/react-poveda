@@ -36,6 +36,7 @@ const Landing = () => {
         img2={imgLi2}
         img3={imgLi3}
         bgColor="var(--grey)"
+        ig={false}
       />
 
       <Article
@@ -68,6 +69,7 @@ const Landing = () => {
         img3={imgIg3}
         bgColor="var(--grey)"
         mainBtnText="@poveda_travel"
+        ig={true}
       />
     </Wrapper>
   );

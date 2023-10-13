@@ -14,6 +14,7 @@ const Button = ({
 }) => {
   return (
     <Wrapper
+      className="btn-container"
       bgColor={bgColor}
       bdColor={bdColor}
       txColor={txColor}

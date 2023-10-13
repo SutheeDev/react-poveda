@@ -14,12 +14,13 @@ const Gallery = ({
   img2,
   img3,
   mainBtnText,
+  ig,
 }) => {
   return (
     <Wrapper bgColor={bgColor}>
       <div className="container">
         <h1 className="title">{title}</h1>
-        <div className="gallery-columns">
+        <div className={ig ? "gallery-columns ig" : "gallery-columns"}>
           <GalleryColumn subTitle={subTitle1} btnText={btnText1} img={img1} />
           <GalleryColumn subTitle={subTitle2} btnText={btnText2} img={img2} />
           <GalleryColumn subTitle={subTitle3} btnText={btnText3} img={img3} />
@@ -43,33 +44,47 @@ const Gallery = ({
 export default Gallery;
 
 const Wrapper = styled.section`
-  padding: 6em var(--side-contain-sm);
+  padding: 6em var(--side-contain-sm) 2em var(--side-contain-sm);
   text-align: center;
   .title {
     color: var(--green-2);
     margin-bottom: 1em;
   }
-  .gallery-columns {
+  /* .gallery-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  } */
+  .gallery-columns > * {
+    padding-bottom: 4em;
   }
+  .gallery-columns.ig :not(:last-child) {
+    padding-bottom: var(--side-contain-sm);
+  }
+  /* .gallery-columns.ig > * {
+    padding-bottom: var(--side-contain-sm);
+  } */
+
+  /* .gallery-columns.ig:last-child {
+    padding-bottom: 4em;
+  } */
   @media screen and (min-width: 950px) {
+    padding: 6em var(--side-contain-950);
     .title {
       font-size: 2.5rem;
+      margin-bottom: 1.3em;
+    }
+    .gallery-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--side-contain-950);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: var(--side-contain-max);
+    margin: 0 auto;
+    .gallery-columns {
+      gap: 3em;
     }
   }
 `;
-
-// 1. License To Live
-//      - Title
-//      - 3 columns
-//      - img / sub title (optional) / button (optional)
-// 2. Follow Us On Instagram
-//      - Title
-//      - 3 columns
-//      - img
-//      - One main button (optional)
-
-// SMALL SCREEN
-// 1. License To Live
-//      - Title -> img -> sub title -> button ->  REPEAT 2 more times
-// 2. Follow Us On Instagram
-//      - Title -> img -> img -> img -> main button

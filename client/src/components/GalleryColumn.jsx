@@ -3,28 +3,35 @@ import { Button } from "../components";
 
 const GalleryColumn = ({ subTitle, btnText, img }) => {
   return (
-    <Wrapper className="gallery-column" img={img}>
-      <div className="img"></div>
-      {subTitle && <h2 className="sub-title">{subTitle}</h2>}
-      {btnText && (
-        <Button
-          text={btnText}
-          path=""
-          bgColor="transparent"
-          bdColor="var(--green-2)"
-          txColor="var(--green-2)"
-          bgColorHover="var(--green-2)"
-          bdColorHover="var(--green-2)"
-          txColorHover="var(--white)"
-        />
-      )}
+    <Wrapper img={img}>
+      <div className="gallery-column-container">
+        <div className="img"></div>
+        {subTitle && <h2 className="sub-title">{subTitle}</h2>}
+        {btnText && (
+          <Button
+            text={btnText}
+            path=""
+            bgColor="transparent"
+            bdColor="var(--green-2)"
+            txColor="var(--green-2)"
+            bgColorHover="var(--green-2)"
+            bdColorHover="var(--green-2)"
+            txColorHover="var(--white)"
+          />
+        )}
+      </div>
     </Wrapper>
   );
 };
 export default GalleryColumn;
 
 const Wrapper = styled.div`
-  padding: 0 0 3em 0;
+  /* .gallery-column-container {
+    padding: 0 0 4em 0;
+  } */
+  /* .gallery-column-container.ig {
+    padding: 0 0 var(--side-contain-sm) 0;
+  } */
   .img {
     width: 100%;
     height: 100vw;
@@ -41,8 +48,12 @@ const Wrapper = styled.div`
   }
   @media screen and (min-width: 950px) {
     .img {
-      width: 100px;
-      height: 100px;
+      width: 100%;
+      height: 325px;
+    }
+    .sub-title {
+      font-size: 1.8rem;
+      margin: 1em 0 1.3em 0;
     }
   }
 `;
