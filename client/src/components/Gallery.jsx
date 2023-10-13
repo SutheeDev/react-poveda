@@ -24,7 +24,18 @@ const Gallery = ({
           <GalleryColumn subTitle={subTitle2} btnText={btnText2} img={img2} />
           <GalleryColumn subTitle={subTitle3} btnText={btnText3} img={img3} />
         </div>
-        {mainBtnText && <Button />}
+        {mainBtnText && (
+          <Button
+            text={mainBtnText}
+            path=""
+            bgColor="transparent"
+            bdColor="var(--green-2)"
+            txColor="var(--green-2)"
+            bgColorHover="var(--green-2)"
+            bdColorHover="var(--green-2)"
+            txColorHover="var(--white)"
+          />
+        )}
       </div>
     </Wrapper>
   );

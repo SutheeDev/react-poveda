@@ -25,7 +25,6 @@ export default GalleryColumn;
 
 const Wrapper = styled.div`
   padding: 0 0 3em 0;
-  background-color: wheat;
   .img {
     width: 100%;
     height: 100vw;
