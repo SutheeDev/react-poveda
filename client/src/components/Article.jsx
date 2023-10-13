@@ -81,7 +81,7 @@ const Wrapper = styled.article`
     line-height: 1.8;
     letter-spacing: 2px;
   }
-  .btn {
+  /* .btn {
     display: block;
     text-align: center;
   }
@@ -89,7 +89,7 @@ const Wrapper = styled.article`
     .btn {
       display: inline;
     }
-  }
+  } */
   @media screen and (min-width: 950px) {
     padding: 0 0;
     .img-title {

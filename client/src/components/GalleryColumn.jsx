@@ -33,7 +33,7 @@ const Wrapper = styled.div`
     background-image: url(${(props) => props.img});
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0 70%;
+    background-position: 50% 70%;
   }
   .sub-title {
     color: var(--green-2);

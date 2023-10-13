@@ -31,6 +31,8 @@ export default Button;
 
 const Wrapper = styled.div`
   .btn {
+    display: block;
+    text-align: center;
     width: 100%;
     font-family: var(--font-2);
     font-size: 0.8rem;
@@ -51,6 +53,7 @@ const Wrapper = styled.div`
   }
   @media screen and (min-width: 450px) {
     .btn {
+      display: inline;
       padding: 0.7em 3em;
     }
   }
