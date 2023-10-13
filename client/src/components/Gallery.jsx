@@ -44,7 +44,7 @@ const Gallery = ({
 export default Gallery;
 
 const Wrapper = styled.section`
-  padding: 6em var(--side-contain-sm) 2em var(--side-contain-sm);
+  padding: 6em var(--side-contain-sm);
   text-align: center;
   .title {
     color: var(--green-2);
@@ -52,6 +52,9 @@ const Wrapper = styled.section`
   }
   .gallery-columns > * {
     padding-bottom: 4em;
+  }
+  div.sc-gLLuHO.bSmQoL {
+    padding-bottom: 0;
   }
   .gallery-columns.ig :not(:last-child) {
     padding-bottom: var(--side-contain-sm);
