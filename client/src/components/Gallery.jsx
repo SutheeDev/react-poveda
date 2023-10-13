@@ -50,24 +50,12 @@ const Wrapper = styled.section`
     color: var(--green-2);
     margin-bottom: 1em;
   }
-  /* .gallery-columns {
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-  } */
   .gallery-columns > * {
     padding-bottom: 4em;
   }
   .gallery-columns.ig :not(:last-child) {
     padding-bottom: var(--side-contain-sm);
   }
-  /* .gallery-columns.ig > * {
-    padding-bottom: var(--side-contain-sm);
-  } */
-
-  /* .gallery-columns.ig:last-child {
-    padding-bottom: 4em;
-  } */
   @media screen and (min-width: 950px) {
     padding: 6em var(--side-contain-950);
     .title {

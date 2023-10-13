@@ -26,12 +26,6 @@ const GalleryColumn = ({ subTitle, btnText, img }) => {
 export default GalleryColumn;
 
 const Wrapper = styled.div`
-  /* .gallery-column-container {
-    padding: 0 0 4em 0;
-  } */
-  /* .gallery-column-container.ig {
-    padding: 0 0 var(--side-contain-sm) 0;
-  } */
   .img {
     width: 100%;
     height: 100vw;
