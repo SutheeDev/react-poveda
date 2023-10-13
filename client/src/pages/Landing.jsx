@@ -57,6 +57,15 @@ const Landing = () => {
         imgLeft={false}
         img={imgAr2}
       />
+
+      <Gallery
+        title="follow us on instagram"
+        img1={imgLi1}
+        img2={imgLi2}
+        img3={imgLi3}
+        bgColor="var(--grey)"
+        mainBtnText="@poveda_travel"
+      />
     </Wrapper>
   );
 };

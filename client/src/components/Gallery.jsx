@@ -13,6 +13,7 @@ const Gallery = ({
   img1,
   img2,
   img3,
+  mainBtnText,
 }) => {
   return (
     <Wrapper bgColor={bgColor}>
@@ -23,7 +24,7 @@ const Gallery = ({
           <GalleryColumn subTitle={subTitle2} btnText={btnText2} img={img2} />
           <GalleryColumn subTitle={subTitle3} btnText={btnText3} img={img3} />
         </div>
-        <Button />
+        {mainBtnText && <Button />}
       </div>
     </Wrapper>
   );

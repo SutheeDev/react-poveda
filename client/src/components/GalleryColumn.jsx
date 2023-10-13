@@ -5,24 +5,27 @@ const GalleryColumn = ({ subTitle, btnText, img }) => {
   return (
     <Wrapper className="gallery-column" img={img}>
       <div className="img"></div>
-      <h2 className="sub-title">{subTitle}</h2>
-      <Button
-        text={btnText}
-        path=""
-        bgColor="transparent"
-        bdColor="var(--green-2)"
-        txColor="var(--green-2)"
-        bgColorHover="var(--green-2)"
-        bdColorHover="var(--green-2)"
-        txColorHover="var(--white)"
-      />
+      {subTitle && <h2 className="sub-title">{subTitle}</h2>}
+      {btnText && (
+        <Button
+          text={btnText}
+          path=""
+          bgColor="transparent"
+          bdColor="var(--green-2)"
+          txColor="var(--green-2)"
+          bgColorHover="var(--green-2)"
+          bdColorHover="var(--green-2)"
+          txColorHover="var(--white)"
+        />
+      )}
     </Wrapper>
   );
 };
 export default GalleryColumn;
 
 const Wrapper = styled.div`
-  padding: 0 0 4em 0;
+  padding: 0 0 3em 0;
+  background-color: wheat;
   .img {
     width: 100%;
     height: 100vw;
