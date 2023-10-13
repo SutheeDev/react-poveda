@@ -6,6 +6,9 @@ import imgAr2 from "../assets/images/AR_HOME_02.jpg";
 import imgLi1 from "../assets/images/GL_LICENSE_01.jpg";
 import imgLi2 from "../assets/images/GL_LICENSE_02.jpg";
 import imgLi3 from "../assets/images/GL_LICENSE_03.jpg";
+import imgIg1 from "../assets/images/GL_IG_01.jpg";
+import imgIg2 from "../assets/images/GL_IG_02.jpg";
+import imgIg3 from "../assets/images/GL_IG_03.jpg";
 
 const Landing = () => {
   const height = "225px";
@@ -60,9 +63,9 @@ const Landing = () => {
 
       <Gallery
         title="follow us on instagram"
-        img1={imgLi1}
-        img2={imgLi2}
-        img3={imgLi3}
+        img1={imgIg1}
+        img2={imgIg2}
+        img3={imgIg3}
         bgColor="var(--grey)"
         mainBtnText="@poveda_travel"
       />
