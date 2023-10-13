@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Attestant from "../utils/Attestant";
 
 // import Swiper core and modules
 import { Swiper, SwiperSlide } from "swiper/react";
