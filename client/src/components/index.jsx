@@ -7,3 +7,4 @@ export { default as Gallery } from "./Gallery";
 export { default as GalleryColumn } from "./GalleryColumn";
 export { default as Testimonial } from "./Testimonial";
 export { default as Footer } from "./Footer";
+export { default as Message } from "./Message";
