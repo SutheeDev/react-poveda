@@ -100,5 +100,8 @@ const Wrapper = styled.section`
     .swiper-button-next {
       --swiper-navigation-sides-offset: 27px;
     }
+    .testimonial {
+      font-size: 1rem;
+    }
   }
 `;
