@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Hero, Article, Gallery, Testimonial } from "../components";
+import { Hero, Article, Gallery, Testimonial, Footer } from "../components";
 import imgUrl from "../assets/images/HERO_01_LANDING.jpg";
 import imgAr1 from "../assets/images/AR_HOME_01.jpg";
 import imgAr2 from "../assets/images/AR_HOME_02.jpg";
@@ -73,6 +73,8 @@ const Landing = () => {
         mainBtnText="@poveda_travel"
         ig={true}
       />
+
+      <Footer />
     </Wrapper>
   );
 };

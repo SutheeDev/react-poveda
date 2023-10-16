@@ -6,3 +6,4 @@ export { default as Article } from "./Article";
 export { default as Gallery } from "./Gallery";
 export { default as GalleryColumn } from "./GalleryColumn";
 export { default as Testimonial } from "./Testimonial";
+export { default as Footer } from "./Footer";
