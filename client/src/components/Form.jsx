@@ -1,11 +1,27 @@
 import styled from "styled-components";
 import { Button } from "../components";
+import { BiX } from "react-icons/bi";
+import { useState } from "react";
 
 const Form = () => {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submit");
+  };
+
   return (
     <Wrapper>
-      <div className="alert"></div>
-      <form action="submit" className="form">
+      <div className="alert">
+        <div className="close-btn">
+          <BiX />
+        </div>
+      </div>
+      <form action="submit" className="form" onSubmit={handleSubmit}>
         <div className="form-rows">
           <label htmlFor="name" className="label">
             name *
@@ -14,9 +30,10 @@ const Form = () => {
             type="text"
             name="name"
             id="name"
-            // value="value"
+            value={name}
             placeholder="your name"
             className="input"
+            onChange={(e) => setName(e.target.value)}
           />
         </div>
         <div className="form-rows">
@@ -27,9 +44,10 @@ const Form = () => {
             type="text"
             name="lastname"
             id="lastname"
-            // value="value"
+            value={lastName}
             placeholder="your last name"
             className="input"
+            onChange={(e) => setLastName(e.target.value)}
           />
         </div>
         <div className="form-rows">
@@ -40,9 +58,10 @@ const Form = () => {
             type="email"
             name="email"
             id="email"
-            // value="value"
+            value={email}
             placeholder="your email address"
             className="input"
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="form-rows message-container">
@@ -52,16 +71,17 @@ const Form = () => {
           <textarea
             name="message"
             id="message"
+            value={message}
             cols="30"
             rows="10"
             placeholder="enter your message"
             className="input"
+            onChange={(e) => setMessage(e.target.value)}
           />
         </div>
         <Button
           text="submit"
           type="submit"
-          path=""
           bgColor="transparent"
           bdColor="var(--white)"
           txColor="var(--white)"
@@ -87,7 +107,8 @@ const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius);
-    background-color: red;
+    background-color: var(--green-4);
+    position: relative;
     z-index: -1;
     transform: translateY(-110%);
 
@@ -96,6 +117,16 @@ const Wrapper = styled.div`
   .alert.display {
     z-index: 1;
     transform: translateY(0%);
+  }
+  .close-btn {
+    position: absolute;
+    top: 0.3em;
+    left: 0.3em;
+
+    color: var(--white);
+    font-size: 2rem;
+    display: flex;
+    cursor: pointer;
   }
   .form {
     width: 100%;

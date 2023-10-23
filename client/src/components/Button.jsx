@@ -22,9 +22,15 @@ const Button = ({
       bdColorHover={bdColorHover}
       txColorHover={txColorHover}
     >
-      <Link to={path} className="btn">
-        {text}
-      </Link>
+      {type ? (
+        <button type={type} className="btn">
+          {text}
+        </button>
+      ) : (
+        <Link to={path} className="btn">
+          {text}
+        </Link>
+      )}
     </Wrapper>
   );
 };
@@ -44,6 +50,7 @@ const Wrapper = styled.div`
     background-color: ${(props) => props.bgColor};
     color: ${(props) => props.txColor};
     border-radius: 35px;
+    cursor: pointer;
 
     transition: var(--btn-transition);
     &:hover {
