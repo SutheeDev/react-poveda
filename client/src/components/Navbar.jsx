@@ -132,6 +132,7 @@ const Wrapper = styled.nav`
   background-color: var(--green-2);
   box-shadow: var(--navbar-shadow);
   position: fixed;
+  z-index: 100;
   width: 100%;
   .main-container {
     padding: 1.6em var(--side-contain-sm);
