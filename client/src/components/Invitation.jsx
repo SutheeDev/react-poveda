@@ -1,18 +1,13 @@
 import { Form } from "../components";
 import styled from "styled-components";
 
-const Invitation = () => {
+const Invitation = ({ title, info }) => {
   return (
     <Wrapper>
       <div className="invite-container">
         <div className="form-info-container">
-          <h1 className="title">title</h1>
-          <p className="info">
-            Bali is an amazing place to immerse yourself into a rich culture,
-            which can surprise you with its history, monuments, celebrations
-            and, of course, food. Contact us so we can help you organize a
-            memorable stay at one of the most magical places on the planet.
-          </p>
+          <h1 className="title">{title}</h1>
+          <p className="info">{info}</p>
         </div>
 
         <div className="form-container">
@@ -33,7 +28,7 @@ const Wrapper = styled.section`
     font-size: 0.85rem;
     line-height: 1.8;
     letter-spacing: 2px;
-    /* margin-top: 2em; */
+    margin: 2em 0 2em 0;
   }
 
   @media screen and (min-width: 950px) {
@@ -50,18 +45,27 @@ const Wrapper = styled.section`
     .form-container {
       width: 50%;
     }
-
+    .form-info-container {
+      padding-right: var(--inner-padding-950);
+    }
+    .form-container {
+      padding-left: var(--inner-padding-950);
+    }
     .title {
       font-size: 2.5rem;
-    }
-    .info {
-      /* max-width: 850px; */
-      /* margin: 2em auto; */
     }
   }
   @media screen and (min-width: 1200px) {
     .info {
       font-size: 1rem;
+    }
+  }
+  @media screen and (min-width: 1500px) {
+    .form-info-container {
+      padding-right: var(--inner-padding-max);
+    }
+    .form-container {
+      padding-left: var(--inner-padding-max);
     }
   }
 `;

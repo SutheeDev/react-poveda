@@ -42,7 +42,10 @@ const Pricing = () => {
         img={imgAr1}
       />
 
-      <Invitation />
+      <Invitation
+        title="come visit us"
+        info={`Bali is an amazing place to immerse yourself into a rich culture, which can surprise you with its history, monuments, celebrations and, of course, food. Contact us so we can help you organize a memorable stay at one of the most magical places on the planet.`}
+      />
 
       <Footer />
     </Wrapper>

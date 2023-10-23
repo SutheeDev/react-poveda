@@ -72,6 +72,8 @@ html {
   --side-contain-sm: 1.5em;
   --side-contain-950: 1.7em;
   --side-contain-max: 1200px;
+  --inner-padding-950: 3em;
+  --inner-padding-max: 11em;
 }
 
 body {
