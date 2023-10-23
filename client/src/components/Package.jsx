@@ -49,6 +49,7 @@ const Wrapper = styled.section`
     font-size: 4rem;
   }
   @media screen and (min-width: 950px) {
+    padding: 6em 0;
     .container {
       display: flex;
 
