@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Hero, Message, Package } from "../components";
+import { Hero, Message, Package, Footer } from "../components";
 import imgUrl from "../assets/images/HERO_07_PRICING.jpg";
 
 const Pricing = () => {
@@ -19,6 +19,8 @@ const Pricing = () => {
         bgColor="var(--green-2)"
         txColor="var(--white)"
       />
+
+      <Footer />
     </Wrapper>
   );
 };
