@@ -9,3 +9,4 @@ export { default as Testimonial } from "./Testimonial";
 export { default as Footer } from "./Footer";
 export { default as Message } from "./Message";
 export { default as Package } from "./Package";
+export { default as Form } from "./Form";

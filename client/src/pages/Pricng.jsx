@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Hero, Message, Package, Footer } from "../components";
+import { Hero, Message, Package, Footer, Form } from "../components";
 import imgUrl from "../assets/images/HERO_07_PRICING.jpg";
 
 const Pricing = () => {
@@ -19,6 +19,24 @@ const Pricing = () => {
         bgColor="var(--green-2)"
         txColor="var(--white)"
       />
+
+      <section>
+        <div className="invite-container">
+          <div className="form-info-container">
+            <h1>title</h1>
+            <p>
+              Bali is an amazing place to immerse yourself into a rich culture,
+              which can surprise you with its history, monuments, celebrations
+              and, of course, food. Contact us so we can help you organize a
+              memorable stay at one of the most magical places on the planet.
+            </p>
+          </div>
+
+          <div className="form-container">
+            <Form />
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </Wrapper>
