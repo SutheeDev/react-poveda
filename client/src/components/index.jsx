@@ -11,3 +11,4 @@ export { default as Message } from "./Message";
 export { default as Package } from "./Package";
 export { default as Form } from "./Form";
 export { default as Invitation } from "./Invitation";
+export { default as Alert } from "./Alert";

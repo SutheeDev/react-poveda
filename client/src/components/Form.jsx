@@ -1,25 +1,68 @@
 import styled from "styled-components";
 import { Button } from "../components";
-import { BiX } from "react-icons/bi";
-import { useState } from "react";
+// import { BiX } from "react-icons/bi";
+import { useState, useReducer } from "react";
+import { Alert } from "../components";
+
+const initialState = {
+  msg: "",
+  alertType: "",
+  showAlert: false,
+};
+
+const reducer = (state, action) => {
+  if (action.type === "ALERT_ERROR") {
+    return {
+      ...state,
+      msg: "Please fill in all required field!",
+      alertType: "error",
+      showAlert: true,
+    };
+  } else if (action.type === "ALERT_SUCCESS") {
+    return {
+      ...state,
+      msg: "We've gotten your message. Thank you so much for reaching out!",
+      alertType: "success",
+      showAlert: true,
+    };
+  } else if (action.type === "ALERT_CLOSE") {
+    return {
+      ...state,
+      msg: "",
+      alertType: "",
+      showAlert: false,
+    };
+  }
+};
 
 const Form = () => {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!name || !email || !message) {
+      dispatch({ type: "ALERT_ERROR" });
+      setTimeout(() => {
+        dispatch({ type: "ALERT_CLOSE" });
+      }, 3000);
+    }
     console.log("submit");
   };
 
   return (
     <Wrapper>
-      <div className="alert">
-        <div className="close-btn">
-          <BiX />
-        </div>
+      <div className={state.showAlert ? "alert display" : "alert"}>
+        <Alert alertType={state.alertType} msg={state.msg} />
+        {/* <div className="alert-content">
+          <div className="close-btn">
+            <BiX />
+          </div>
+          <div className="alert-info"></div>
+        </div> */}
       </div>
       <form action="submit" className="form" onSubmit={handleSubmit}>
         <div className="form-rows">
