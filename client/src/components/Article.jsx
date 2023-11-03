@@ -12,6 +12,7 @@ const Article = ({
   imgLeft,
   img,
   btnText,
+  path,
 }) => {
   return (
     <Wrapper
@@ -42,6 +43,7 @@ const Article = ({
             bgColorHover={txColor}
             bdColorHover={txColor}
             txColorHover={btnHoverColor}
+            path={path}
           />
         </div>
       </div>

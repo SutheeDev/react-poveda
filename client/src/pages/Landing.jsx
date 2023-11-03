@@ -52,6 +52,7 @@ const Landing = () => {
         btnText="learn more"
         imgLeft={true}
         img={imgAr1}
+        path="/visit"
       />
 
       <Article
@@ -63,6 +64,7 @@ const Landing = () => {
         btnText="more about us"
         imgLeft={false}
         img={imgAr2}
+        path="/aboutus"
       />
 
       <Testimonial bgColor="var(--green-1)" />
