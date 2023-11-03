@@ -13,6 +13,9 @@ const Gallery = ({
   img1,
   img2,
   img3,
+  path1,
+  path2,
+  path3,
   mainBtnText,
   ig,
 }) => {
@@ -21,9 +24,24 @@ const Gallery = ({
       <div className="container">
         <h1 className="title">{title}</h1>
         <div className={ig ? "gallery-columns ig" : "gallery-columns"}>
-          <GalleryColumn subTitle={subTitle1} btnText={btnText1} img={img1} />
-          <GalleryColumn subTitle={subTitle2} btnText={btnText2} img={img2} />
-          <GalleryColumn subTitle={subTitle3} btnText={btnText3} img={img3} />
+          <GalleryColumn
+            subTitle={subTitle1}
+            btnText={btnText1}
+            img={img1}
+            path={path1}
+          />
+          <GalleryColumn
+            subTitle={subTitle2}
+            btnText={btnText2}
+            img={img2}
+            path={path2}
+          />
+          <GalleryColumn
+            subTitle={subTitle3}
+            btnText={btnText3}
+            img={img3}
+            path={path3}
+          />
         </div>
         {mainBtnText && (
           <Button

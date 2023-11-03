@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Button } from "../components";
 
-const GalleryColumn = ({ subTitle, btnText, img }) => {
+const GalleryColumn = ({ subTitle, btnText, img, path }) => {
   return (
     <Wrapper img={img}>
       <div className="gallery-column-container">
@@ -10,7 +10,7 @@ const GalleryColumn = ({ subTitle, btnText, img }) => {
         {btnText && (
           <Button
             text={btnText}
-            path=""
+            path={path}
             bgColor="transparent"
             bdColor="var(--green-2)"
             txColor="var(--green-2)"

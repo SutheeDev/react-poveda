@@ -35,6 +35,9 @@ const Landing = () => {
         img1={imgLi1}
         img2={imgLi2}
         img3={imgLi3}
+        path1="/adventure"
+        path2="/culture"
+        path3="/relax"
         bgColor="var(--grey)"
         ig={false}
       />
