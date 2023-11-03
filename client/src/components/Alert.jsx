@@ -1,17 +1,8 @@
-import { BiX } from "react-icons/bi";
 import styled from "styled-components";
 
 const Alert = ({ alertType, msg, dispatch }) => {
-  // const closeBtn = () => {
-  //   console.log("close!");
-  //   dispatch({ type: ALERT_CLOSE });
-  // };
-
   return (
     <Wrapper className="alert-content">
-      {/* <div className="close-btn" onClick={closeBtn}>
-        <BiX />
-      </div> */}
       <div className="alert-info">
         <p className="alertType">{alertType}</p>
         <p className="message">{msg}</p>
