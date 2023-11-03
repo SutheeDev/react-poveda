@@ -65,6 +65,7 @@ export default Gallery;
 const Wrapper = styled.section`
   padding: 6em var(--side-contain-sm);
   text-align: center;
+  background-color: ${(props) => props.bgColor};
   .title {
     color: var(--green-2);
     margin-bottom: 1em;
