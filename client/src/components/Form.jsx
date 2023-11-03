@@ -48,7 +48,7 @@ const Form = () => {
       dispatch({ type: "ALERT_ERROR" });
       setTimeout(() => {
         dispatch({ type: "ALERT_CLOSE" });
-      }, 3000);
+      }, 2500);
       return;
     }
     dispatch({ type: "ALERT_SUCCESS" });
@@ -58,13 +58,17 @@ const Form = () => {
       setEmail("");
       setMessage("");
       dispatch({ type: "ALERT_CLOSE" });
-    }, 3000);
+    }, 2500);
   };
 
   return (
     <Wrapper>
       <div className={state.showAlert ? "alert display" : "alert"}>
-        <Alert alertType={state.alertType} msg={state.msg} />
+        <Alert
+          alertType={state.alertType}
+          msg={state.msg}
+          dispatch={dispatch}
+        />
       </div>
       <form action="submit" className="form" onSubmit={handleSubmit}>
         <div className="form-rows">
@@ -144,6 +148,7 @@ const Wrapper = styled.div`
   display: grid;
   place-items: center;
   overflow: hidden;
+  border-radius: var(--border-radius);
   .alert,
   .form {
     grid-area: 1/1;
