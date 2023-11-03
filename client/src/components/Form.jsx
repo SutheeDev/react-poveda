@@ -14,8 +14,8 @@ const reducer = (state, action) => {
   if (action.type === "ALERT_ERROR") {
     return {
       ...state,
-      msg: "Please fill in all required field!",
-      alertType: "error",
+      msg: "Please fill in all required fields!",
+      alertType: "warning",
       showAlert: true,
     };
   } else if (action.type === "ALERT_SUCCESS") {
@@ -49,20 +49,22 @@ const Form = () => {
       setTimeout(() => {
         dispatch({ type: "ALERT_CLOSE" });
       }, 3000);
+      return;
     }
-    console.log("submit");
+    dispatch({ type: "ALERT_SUCCESS" });
+    setTimeout(() => {
+      setName("");
+      setLastName("");
+      setEmail("");
+      setMessage("");
+      dispatch({ type: "ALERT_CLOSE" });
+    }, 3000);
   };
 
   return (
     <Wrapper>
       <div className={state.showAlert ? "alert display" : "alert"}>
         <Alert alertType={state.alertType} msg={state.msg} />
-        {/* <div className="alert-content">
-          <div className="close-btn">
-            <BiX />
-          </div>
-          <div className="alert-info"></div>
-        </div> */}
       </div>
       <form action="submit" className="form" onSubmit={handleSubmit}>
         <div className="form-rows">
@@ -155,22 +157,13 @@ const Wrapper = styled.div`
     z-index: -1;
     transform: translateY(-110%);
 
-    transition: var(--global-transition);
+    transition: var(--alert-transition);
   }
   .alert.display {
     z-index: 1;
     transform: translateY(0%);
   }
-  .close-btn {
-    position: absolute;
-    top: 0.3em;
-    left: 0.3em;
 
-    color: var(--white);
-    font-size: 2rem;
-    display: flex;
-    cursor: pointer;
-  }
   .form {
     width: 100%;
     padding-bottom: 3em;

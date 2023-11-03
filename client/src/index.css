@@ -47,6 +47,7 @@ html {
   --green-2: #485342;
   --green-3: #5c6756;
   --green-4: #6b7665;
+  --alert-warning: #d14040;
 
   /* Fonts */
   --font-1: "Jacques Francois", serif;
@@ -67,6 +68,7 @@ html {
   /* Transition */
   --global-transition: all 0.15s ease;
   --btn-transition: all 0.2s ease;
+  --alert-transition: all 0.4s ease;
 
   /* container */
   --side-contain-sm: 1.5em;
