@@ -34,17 +34,19 @@ const Article = ({
             {pSecond && <p className="paragraph">{pSecond}</p>}
             {pThird && <p className="paragraph">{pThird}</p>}
           </div>
-          <Button
-            className="btn"
-            text={btnText}
-            bgColor="transparent"
-            bdColor={txColor}
-            txColor={txColor}
-            bgColorHover={txColor}
-            bdColorHover={txColor}
-            txColorHover={btnHoverColor}
-            path={path}
-          />
+          {btnText && (
+            <Button
+              className="btn"
+              text={btnText}
+              bgColor="transparent"
+              bdColor={txColor}
+              txColor={txColor}
+              bgColorHover={txColor}
+              bdColorHover={txColor}
+              txColorHover={btnHoverColor}
+              path={path}
+            />
+          )}
         </div>
       </div>
     </Wrapper>
