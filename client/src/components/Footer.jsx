@@ -34,15 +34,27 @@ const Footer = () => {
             <p>123-456-7890</p>
           </div>
           <div className="social-container">
-            <div className="social-icon">
+            <a
+              className="social-icon"
+              href="https://twitter.com/"
+              target="_blank"
+            >
               <BiLogoTwitter />
-            </div>
-            <div className="social-icon">
+            </a>
+            <a
+              className="social-icon"
+              href="https://www.facebook.com/"
+              target="_blank"
+            >
               <BiLogoFacebookCircle />
-            </div>
-            <div className="social-icon">
+            </a>
+            <a
+              className="social-icon"
+              href="https://www.instagram.com/"
+              target="_blank"
+            >
               <BiLogoInstagramAlt />
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -80,9 +92,13 @@ const Wrapper = styled.footer`
     align-items: center;
     gap: 1em;
   }
+  a {
+    color: var(--green-2);
+  }
   .social-icon {
     font-size: 1.3rem;
     display: flex;
+    cursor: pointer;
   }
   @media screen and (min-width: 950px) {
     padding: 6em var(--side-contain-950);

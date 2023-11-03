@@ -16,6 +16,7 @@ const Gallery = ({
   path1,
   path2,
   path3,
+  mainPath,
   mainBtnText,
   ig,
 }) => {
@@ -46,7 +47,7 @@ const Gallery = ({
         {mainBtnText && (
           <Button
             text={mainBtnText}
-            path=""
+            path={mainPath}
             bgColor="transparent"
             bdColor="var(--green-2)"
             txColor="var(--green-2)"

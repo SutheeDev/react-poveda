@@ -76,6 +76,7 @@ const Landing = () => {
         img3={imgIg3}
         bgColor="var(--grey)"
         mainBtnText="@poveda_travel"
+        mainPath="https://www.instagram.com/"
         ig={true}
       />
 
