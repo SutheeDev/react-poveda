@@ -71,7 +71,15 @@ const Wrapper = styled.footer`
   .links-container,
   .link {
     color: var(--green-2);
-    display: block;
+  }
+  .logo {
+    display: inline-block;
+  }
+  .links-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .logo,
   .links-container,
