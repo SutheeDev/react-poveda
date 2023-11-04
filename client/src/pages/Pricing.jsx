@@ -4,8 +4,8 @@ import {
   Message,
   Package,
   Footer,
+  Testimonial,
   Invitation,
-  Article,
 } from "../components";
 import imgUrl from "../assets/images/HERO_07_PRICING.jpg";
 
@@ -26,22 +26,39 @@ const Pricing = () => {
         title="relax in bali"
         info={`Amazing, all-inclusive resorts, beautiful beaches and mindfulness sessions - these are just a few of the things that will help you relax and enjoy your holiday.`}
         price="420"
-        bgColor="var(--green-2)"
+        bgColor="var(--green-3)"
         txColor="var(--white)"
         btnText="learn more"
       />
 
-      <Article
-        title="a place to be"
-        pFirst={`It's no coincidence that Bali is one of the top destinations for the Instagram nation. The breathtaking nature, the endless beaches, exotic temples and friendly locals make the island a place for everyone.`}
-        pSecond={`We know Bali better than the backs of our hands, meaning that whether you want to plan a surfing holiday or find inner peace on a meditation retreat, we know exactly how to start planning your dream trip to Bali.`}
-        bgColor="var(--light-grey)"
+      <Package
+        title="adventure in bali"
+        info={`Explore the tropical nature, hop on a scooter to drive around the island or choose other activities, such as water sports, to make your holiday memorable.`}
+        price="569"
+        bgColor="var(--grey)"
         txColor="var(--green-2)"
-        btnHoverColor="var(--white)"
         btnText="learn more"
-        imgLeft={true}
-        img={imgAr1}
       />
+
+      <Package
+        title="feel the culture"
+        info={`The Balinese culture is ready for the curious – ancient monuments, local festivals and exotic food make you leave the island with deeper knowledge of its lifestyle.`}
+        price="514"
+        bgColor="var(--green-3)"
+        txColor="var(--white)"
+        btnText="learn more"
+      />
+
+      <Package
+        title="personal adventure"
+        info={`Looking for something a bit more out there? No problem. We are here to help you plan your special experience and find the best solutions on how to make your wishes come true. Contact us to make your dream vacation come true.`}
+        price="611"
+        bgColor="var(--grey)"
+        txColor="var(--green-2)"
+        btnText="learn more"
+      />
+
+      <Testimonial bgColor="var(--green-3)" />
 
       <Invitation
         title="come visit us"
