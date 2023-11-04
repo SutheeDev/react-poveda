@@ -28,6 +28,7 @@ const Pricing = () => {
         price="420"
         bgColor="var(--green-2)"
         txColor="var(--white)"
+        btnText="learn more"
       />
 
       <Article

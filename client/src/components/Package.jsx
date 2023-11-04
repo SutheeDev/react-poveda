@@ -1,7 +1,7 @@
 import { Button } from "../components";
 import styled from "styled-components";
 
-const Package = ({ title, info, price, bgColor, txColor }) => {
+const Package = ({ title, info, price, bgColor, txColor, btnText }) => {
   return (
     <Wrapper bgColor={bgColor} txColor={txColor}>
       <div className="container">
@@ -9,7 +9,7 @@ const Package = ({ title, info, price, bgColor, txColor }) => {
           <h2 className="title">{title}</h2>
           <p className="info">{info}</p>
           <Button
-            text="learn more"
+            text={btnText}
             bgColor="transparent"
             bdColor={txColor}
             txColor={txColor}
