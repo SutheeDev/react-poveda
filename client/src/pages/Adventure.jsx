@@ -58,6 +58,14 @@ const Adventure = () => {
         imgLeft={false}
         img={imgAr4}
       />
+
+      <Package
+        title="adventure in bali"
+        info={`If you want to choose active activities to make your holiday memorable, we can help you with that. Contact us to organise your trip.`}
+        price="569"
+        bgColor="var(--grey)"
+        txColor="var(--green-2)"
+      />
     </Wrapper>
   );
 };

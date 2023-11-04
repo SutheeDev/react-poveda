@@ -33,7 +33,11 @@ const Wrapper = styled.section`
   background-color: ${(props) => props.bgColor};
   color: ${(props) => props.txColor};
   padding: 6em var(--side-contain-sm);
-
+  .title,
+  .from,
+  .price {
+    color: ${(props) => props.txColor};
+  }
   .info {
     font-size: 0.85rem;
     line-height: 1.8;
