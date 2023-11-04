@@ -67,6 +67,13 @@ const Adventure = () => {
         txColor="var(--green-2)"
         btnText="pricing"
       />
+
+      <Invitation
+        title="come visit us"
+        info={`We’ve been obsessed with exploring this island for several years - let us show the best we’ve found! Contact us so we can help you organize a memorable stay at one of the most magical places on the planet!`}
+      />
+
+      <Footer />
     </Wrapper>
   );
 };
