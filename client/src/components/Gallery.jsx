@@ -92,8 +92,10 @@ const Wrapper = styled.section`
     }
   }
   @media screen and (min-width: 1200px) {
-    max-width: var(--side-contain-max);
-    margin: 0 auto;
+    .container {
+      max-width: calc(var(--side-contain-max) - (var(--side-contain-950) * 2));
+      margin: 0 auto;
+    }
     .gallery-columns {
       gap: 3em;
     }
