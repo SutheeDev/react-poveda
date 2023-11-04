@@ -15,7 +15,7 @@ const Contact = () => {
         paragraph={`We’ve been obsessed with exploring this island for several years – let us show you the best spots we’ve found! From breathtaking locations to colorful culture and relaxing mood, we can help you organize a memorable stay in one of the most magical places on the planet.`}
       />
 
-      <Invitation />
+      <Invitation contact={true} />
 
       <Gallery
         title="follow us on instagram"
