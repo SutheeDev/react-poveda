@@ -78,7 +78,7 @@ const Wrapper = styled.section`
 
     transition: var(--btn-transition);
     &:hover {
-      color: var(--white);
+      color: ${(props) => props.bgColor};
       background-color: ${(props) => props.txColor};
     }
   }
