@@ -24,7 +24,7 @@ const Article = ({
       <div className={imgLeft ? "container imgLeft" : "container imgRight"}>
         <div className="img-container">
           <h1 className="img-title">{title}</h1>
-          <div className="img">{/* <img src={img} alt="" /> */}</div>
+          <div className="img"></div>
         </div>
 
         <div className="content-container">
@@ -68,7 +68,7 @@ const Wrapper = styled.article`
     background-image: url(${(props) => props.img});
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-position: 50% 40%;
   }
   .content-title {
     display: none;

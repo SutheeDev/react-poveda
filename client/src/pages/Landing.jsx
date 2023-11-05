@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { Hero, Article, Gallery, Testimonial, Footer } from "../components";
+import {
+  Hero,
+  Article,
+  Gallery,
+  Testimonial,
+  Invitation,
+  Footer,
+} from "../components";
 import imgUrl from "../assets/images/HERO_01_LANDING.jpg";
 import imgAr1 from "../assets/images/AR_HOME_01.jpg";
 import imgAr2 from "../assets/images/AR_HOME_02.jpg";
@@ -78,6 +85,11 @@ const Landing = () => {
         mainBtnText="@poveda_travel"
         mainPath="https://www.instagram.com/"
         ig={true}
+      />
+
+      <Invitation
+        title="come visit us"
+        info={`Bali is an amazing place to immerse yourself into a rich culture, which can surprise you with its history, monuments, celebrations and, of course, food. Contact us so we can help you organize a memorable stay at one of the most magical places on the planet.`}
       />
 
       <Footer />
