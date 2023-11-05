@@ -8,7 +8,13 @@ const Package = ({ title, info, price, bgColor, txColor, btnText, path }) => {
         <div className="info-container">
           <h2 className="title">{title}</h2>
           <p className="info">{info}</p>
-          {btnText && (
+          {btnText === "contact" ? (
+            <div className="btn-container">
+              <a href="#contact" className="scroll-btn">
+                {btnText}
+              </a>
+            </div>
+          ) : (
             <Button
               text={btnText}
               path={path}
@@ -55,6 +61,33 @@ const Wrapper = styled.section`
   .price {
     font-size: 4rem;
   }
+  .scroll-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-family: var(--font-2);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    padding: 0.7em 2em;
+    text-transform: uppercase;
+    border: 3px solid ${(props) => props.txColor};
+    background-color: transparent;
+    color: ${(props) => props.txColor};
+    border-radius: 35px;
+    cursor: pointer;
+
+    transition: var(--btn-transition);
+    &:hover {
+      color: var(--white);
+      background-color: ${(props) => props.txColor};
+    }
+  }
+  @media screen and (min-width: 450px) {
+    .scroll-btn {
+      display: inline;
+      padding: 0.7em 3em;
+    }
+  }
   @media screen and (min-width: 950px) {
     padding: 6em 0;
     .container {
@@ -90,6 +123,9 @@ const Wrapper = styled.section`
   }
   @media screen and (min-width: 1200px) {
     .info {
+      font-size: 1rem;
+    }
+    .scroll-btn {
       font-size: 1rem;
     }
   }

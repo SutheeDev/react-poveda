@@ -58,7 +58,7 @@ const Pricing = () => {
         price="611"
         bgColor="var(--grey)"
         txColor="var(--green-2)"
-        btnText="learn more"
+        btnText="contact"
       />
 
       <Testimonial bgColor="var(--green-3)" />
