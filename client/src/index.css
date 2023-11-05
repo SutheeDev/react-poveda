@@ -47,6 +47,7 @@ html {
   --green-2: #485342;
   --green-3: #5c6756;
   --green-4: #6b7665;
+  --alert-warning: #d14040;
 
   /* Fonts */
   --font-1: "Jacques Francois", serif;
@@ -66,6 +67,15 @@ html {
 
   /* Transition */
   --global-transition: all 0.15s ease;
+  --btn-transition: all 0.2s ease;
+  --alert-transition: all 0.4s ease;
+
+  /* container */
+  --side-contain-sm: 1.5em;
+  --side-contain-950: 1.7em;
+  --side-contain-max: 1200px;
+  --inner-padding-950: 3em;
+  --inner-padding-max: 11em;
 }
 
 body {
@@ -76,3 +86,45 @@ body {
 a {
   text-decoration: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-1);
+  color: var(--white);
+  margin: 0;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 5rem); /* Large heading */
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 3rem); /* Medium heading */
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem); /* Small heading */
+}
+
+h4 {
+  font-size: clamp(1rem, 2vw, 2rem); /* Extra small heading */
+}
+
+h5 {
+  font-size: clamp(0.875rem, 1.5vw, 1.5rem); /* Tiny heading */
+}
+
+p {
+  font-weight: 400;
+}
+
+/* img {
+  width: 100%;
+} */

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { BiX } from "react-icons/bi";
 import { BiSolidDownArrow } from "react-icons/bi";
@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const containerRef = useRef(null);
 
@@ -43,14 +43,22 @@ const Navbar = () => {
         <Logo />
         <div className="navlinks-container">
           <div className={isMenuOpen ? "navlinks show" : "navlinks"}>
-            <Link className="link about-us" to="/">
+            <NavLink
+              className={({ isActive }) => (isActive ? "link active" : "link")}
+              to="/aboutus"
+              onClick={() => closeAll()}
+            >
               about us
-            </Link>
+            </NavLink>
             <div className="visit-container" ref={containerRef}>
               <div className="linkToVisit">
-                <Link className="link" to="/">
+                <NavLink
+                  className="link"
+                  to="/visit"
+                  onClick={() => closeAll()}
+                >
                   visit
-                </Link>
+                </NavLink>
                 <div
                   className="arrow-down"
                   onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
@@ -64,27 +72,40 @@ const Navbar = () => {
                 }
               >
                 <div className="subLink-container">
-                  <Link className="link sub-link" to="/adventure">
+                  <NavLink
+                    className="link sub-link"
+                    to="/adventure"
+                    onClick={() => closeAll()}
+                  >
                     adventure
-                  </Link>
-                  <Link className="link sub-link" to="/culture">
+                  </NavLink>
+                  <NavLink
+                    className="link sub-link"
+                    to="/culture"
+                    onClick={() => closeAll()}
+                  >
                     culture
-                  </Link>
-                  <Link className="link sub-link" to="/relax">
+                  </NavLink>
+                  <NavLink
+                    className="link sub-link"
+                    to="/relax"
+                    onClick={() => closeAll()}
+                  >
                     relax
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
-            <Link
+            <NavLink
               className={isSubMenuOpen ? "link pricing extend" : "link pricing"}
-              to="/"
+              to="/pricing"
+              onClick={() => closeAll()}
             >
               pricing
-            </Link>
-            <Link className="link" to="/">
+            </NavLink>
+            <NavLink className="link" to="/contact" onClick={() => closeAll()}>
               contact
-            </Link>
+            </NavLink>
           </div>
           <div className="hamburger-menu-container">
             {isMenuOpen ? (
@@ -111,9 +132,10 @@ const Wrapper = styled.nav`
   background-color: var(--green-2);
   box-shadow: var(--navbar-shadow);
   position: fixed;
+  z-index: 100;
   width: 100%;
   .main-container {
-    padding: 1.6em 1.5em;
+    padding: 1.6em var(--side-contain-sm);
 
     /* Separate Logo and everything else */
     display: flex;
@@ -178,6 +200,7 @@ const Wrapper = styled.nav`
     border-bottom: 1px solid transparent;
     width: fit-content;
   }
+  .active,
   .link:hover {
     border-bottom: 1px solid var(--white);
   }
@@ -238,8 +261,11 @@ const Wrapper = styled.nav`
     background-color: transparent;
     box-shadow: none;
     .main-container {
-      padding: 1.7em 1.7em;
+      padding: 1.7em var(--side-contain-950);
       align-items: center;
+
+      max-width: var(--side-contain-max);
+      margin: 0 auto;
     }
     .navlinks-container {
       flex-direction: row;
