@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Invitation = ({ title, info, contact }) => {
   return (
     <Wrapper>
-      <div className="invite-container">
+      <div className="invite-container" id="contact">
         {contact ? (
           <div className="contact-info-container">
             <div className="headquarters">
