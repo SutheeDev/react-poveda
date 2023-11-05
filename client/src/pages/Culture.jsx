@@ -55,7 +55,7 @@ const Culture = () => {
         price="514"
         bgColor="var(--green-3)"
         txColor="var(--white)"
-        btnText="pricing"
+        btnText="contact"
       />
 
       <Invitation

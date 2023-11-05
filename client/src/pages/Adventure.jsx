@@ -65,7 +65,7 @@ const Adventure = () => {
         price="569"
         bgColor="var(--grey)"
         txColor="var(--green-2)"
-        btnText="pricing"
+        btnText="contact"
       />
 
       <Invitation
