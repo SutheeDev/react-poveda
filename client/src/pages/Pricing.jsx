@@ -29,6 +29,7 @@ const Pricing = () => {
         bgColor="var(--green-3)"
         txColor="var(--white)"
         btnText="learn more"
+        path="/relax"
       />
 
       <Package
@@ -38,6 +39,7 @@ const Pricing = () => {
         bgColor="var(--grey)"
         txColor="var(--green-2)"
         btnText="learn more"
+        path="/adventure"
       />
 
       <Package
@@ -47,6 +49,7 @@ const Pricing = () => {
         bgColor="var(--green-3)"
         txColor="var(--white)"
         btnText="learn more"
+        path="/culture"
       />
 
       <Package

@@ -1,22 +1,25 @@
 import { Button } from "../components";
 import styled from "styled-components";
 
-const Package = ({ title, info, price, bgColor, txColor, btnText }) => {
+const Package = ({ title, info, price, bgColor, txColor, btnText, path }) => {
   return (
     <Wrapper bgColor={bgColor} txColor={txColor}>
       <div className="container">
         <div className="info-container">
           <h2 className="title">{title}</h2>
           <p className="info">{info}</p>
-          <Button
-            text={btnText}
-            bgColor="transparent"
-            bdColor={txColor}
-            txColor={txColor}
-            bgColorHover={txColor}
-            bdColorHover={txColor}
-            txColorHover={bgColor}
-          />
+          {btnText && (
+            <Button
+              text={btnText}
+              path={path}
+              bgColor="transparent"
+              bdColor={txColor}
+              txColor={txColor}
+              bgColorHover={txColor}
+              bdColorHover={txColor}
+              txColorHover={bgColor}
+            />
+          )}
         </div>
 
         <div className="price-container">
