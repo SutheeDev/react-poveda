@@ -8,6 +8,7 @@ import morgan from "morgan";
 
 // middleware import
 import ErrorHandleMiddleware from "./middleware/error-handler.js";
+import NotFoundMiddleware from "./middleware/not-found.js";
 
 if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
@@ -15,6 +16,7 @@ if (process.env.NODE_ENV !== "production") {
 
 app.use(express.json());
 
+app.use(NotFoundMiddleware);
 app.use(ErrorHandleMiddleware);
 
 const port = process.env.PORT || 5000;
