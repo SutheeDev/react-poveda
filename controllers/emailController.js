@@ -42,9 +42,4 @@ const sendThanksEmail = async (req, res) => {
   res.status(StatusCodes.OK).json({ data });
 };
 
-const test = (req, res) => {
-  const { name, lastname, email, message } = req.body;
-  res.status(StatusCodes.OK).json({ name, lastname, email, message });
-};
-
-export { sendThanksEmail, test };
+export { sendThanksEmail };
