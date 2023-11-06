@@ -6,11 +6,16 @@ dotenv.config();
 import "express-async-errors";
 import morgan from "morgan";
 
+// middleware import
+import ErrorHandleMiddleware from "./middleware/error-handler.js";
+
 if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
 }
 
 app.use(express.json());
+
+app.use(ErrorHandleMiddleware);
 
 const port = process.env.PORT || 5000;
 
