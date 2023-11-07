@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Button } from "../components";
-// import { BiX } from "react-icons/bi";
 import { useState, useReducer } from "react";
 import { Alert } from "../components";
 import axios from "axios";
@@ -15,7 +14,7 @@ const reducer = (state, action) => {
   if (action.type === "ALERT_ERROR") {
     return {
       ...state,
-      msg: "Please fill in all required fields!",
+      msg: action.payload.msg,
       alertType: "warning",
       showAlert: true,
     };
@@ -43,34 +42,39 @@ const Form = () => {
   const [message, setMessage] = useState("");
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const resetState = () => {
+    setName("");
+    setLastName("");
+    setEmail("");
+    setMessage("");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      console.log(name);
-      const { data } = await axios.post("http://localhost:5000/api/v1/email/", {
+      await axios.post("http://localhost:5000/api/v1/email/", {
         name,
+        lastName,
+        email,
+        message,
       });
-      console.log(data);
+      dispatch({ type: "ALERT_SUCCESS" });
+      setTimeout(() => {
+        resetState();
+        dispatch({ type: "ALERT_CLOSE" });
+      }, 2500);
     } catch (error) {
-      console.log(error);
+      dispatch({
+        type: "ALERT_ERROR",
+        payload: {
+          msg: error.response.data.msg,
+        },
+      });
+      setTimeout(() => {
+        dispatch({ type: "ALERT_CLOSE" });
+      }, 2500);
     }
-
-    // if (!name || !email || !message) {
-    //   dispatch({ type: "ALERT_ERROR" });
-    //   setTimeout(() => {
-    //     dispatch({ type: "ALERT_CLOSE" });
-    //   }, 2500);
-    //   return;
-    // }
-    // dispatch({ type: "ALERT_SUCCESS" });
-    // setTimeout(() => {
-    //   setName("");
-    //   setLastName("");
-    //   setEmail("");
-    //   setMessage("");
-    //   dispatch({ type: "ALERT_CLOSE" });
-    // }, 2500);
   };
 
   return (
