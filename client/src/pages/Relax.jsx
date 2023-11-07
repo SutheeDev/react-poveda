@@ -55,7 +55,7 @@ const Relax = () => {
         price="420"
         bgColor="var(--green-3)"
         txColor="var(--white)"
-        btnText="pricing"
+        btnText="contact"
       />
 
       <Invitation

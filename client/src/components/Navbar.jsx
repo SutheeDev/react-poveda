@@ -213,7 +213,6 @@ const Wrapper = styled.nav`
     position: relative;
   }
   .linkToVisit {
-    /* background-color: wheat; */
     display: flex;
     flex-direction: row-reverse;
     gap: 0.6em;
@@ -242,7 +241,6 @@ const Wrapper = styled.nav`
   .subLink-container {
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-end; */
     align-items: flex-end;
     gap: 1.5em;
   }

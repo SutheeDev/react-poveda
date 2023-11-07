@@ -12,6 +12,7 @@
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -47,7 +48,7 @@ html {
   --green-2: #485342;
   --green-3: #5c6756;
   --green-4: #6b7665;
-  --alert-warning: #d14040;
+  --alert-warning: #e95858;
 
   /* Fonts */
   --font-1: "Jacques Francois", serif;

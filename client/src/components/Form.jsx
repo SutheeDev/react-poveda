@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Button } from "../components";
-// import { BiX } from "react-icons/bi";
 import { useState, useReducer } from "react";
 import { Alert } from "../components";
+import axios from "axios";
 
 const initialState = {
   msg: "",
@@ -14,8 +14,8 @@ const reducer = (state, action) => {
   if (action.type === "ALERT_ERROR") {
     return {
       ...state,
-      msg: "Please fill in all required fields!",
-      alertType: "warning",
+      msg: action.payload.msg,
+      alertType: "error",
       showAlert: true,
     };
   } else if (action.type === "ALERT_SUCCESS") {
@@ -42,33 +42,51 @@ const Form = () => {
   const [message, setMessage] = useState("");
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const handleSubmit = (e) => {
+  const resetState = () => {
+    setName("");
+    setLastName("");
+    setEmail("");
+    setMessage("");
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!name || !email || !message) {
-      dispatch({ type: "ALERT_ERROR" });
+
+    try {
+      await axios.post("http://localhost:5000/api/v1/email/", {
+        name,
+        lastName,
+        email,
+        message,
+      });
+      dispatch({ type: "ALERT_SUCCESS" });
+      setTimeout(() => {
+        resetState();
+        dispatch({ type: "ALERT_CLOSE" });
+      }, 2300);
+    } catch (error) {
+      dispatch({
+        type: "ALERT_ERROR",
+        payload: {
+          msg: error.response.data.msg,
+        },
+      });
       setTimeout(() => {
         dispatch({ type: "ALERT_CLOSE" });
-      }, 2500);
-      return;
+      }, 2300);
     }
-    dispatch({ type: "ALERT_SUCCESS" });
-    setTimeout(() => {
-      setName("");
-      setLastName("");
-      setEmail("");
-      setMessage("");
-      dispatch({ type: "ALERT_CLOSE" });
-    }, 2500);
   };
 
   return (
     <Wrapper>
-      <div className={state.showAlert ? "alert display" : "alert"}>
-        <Alert
-          alertType={state.alertType}
-          msg={state.msg}
-          dispatch={dispatch}
-        />
+      <div
+        className={
+          state.showAlert
+            ? `alert display ${state.alertType}`
+            : `alert ${state.alertType}`
+        }
+      >
+        <Alert alertType={state.alertType} msg={state.msg} />
       </div>
       <form action="submit" className="form" onSubmit={handleSubmit}>
         <div className="form-rows">
@@ -168,7 +186,9 @@ const Wrapper = styled.div`
     z-index: 1;
     transform: translateY(0%);
   }
-
+  .alert.error {
+    background-color: var(--alert-warning);
+  }
   .form {
     width: 100%;
     padding-bottom: 3em;

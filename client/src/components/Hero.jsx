@@ -11,7 +11,7 @@ const Hero = ({ smText, bgText, imgUrl, paragraph, height, btn }) => {
         {btn && (
           <Button
             text={btn}
-            path="/aboutus"
+            path="/pricing"
             bgColor="transparent"
             bdColor="var(--white)"
             txColor="var(--white)"

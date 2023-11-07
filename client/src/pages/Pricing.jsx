@@ -9,9 +9,6 @@ import {
 } from "../components";
 import imgUrl from "../assets/images/HERO_07_PRICING.jpg";
 
-// Delete later
-import imgAr1 from "../assets/images/AR_HOME_01.jpg";
-
 const Pricing = () => {
   return (
     <Wrapper>
@@ -29,6 +26,7 @@ const Pricing = () => {
         bgColor="var(--green-3)"
         txColor="var(--white)"
         btnText="learn more"
+        path="/relax"
       />
 
       <Package
@@ -38,6 +36,7 @@ const Pricing = () => {
         bgColor="var(--grey)"
         txColor="var(--green-2)"
         btnText="learn more"
+        path="/adventure"
       />
 
       <Package
@@ -47,6 +46,7 @@ const Pricing = () => {
         bgColor="var(--green-3)"
         txColor="var(--white)"
         btnText="learn more"
+        path="/culture"
       />
 
       <Package
@@ -55,7 +55,7 @@ const Pricing = () => {
         price="611"
         bgColor="var(--grey)"
         txColor="var(--green-2)"
-        btnText="learn more"
+        btnText="contact"
       />
 
       <Testimonial bgColor="var(--green-3)" />

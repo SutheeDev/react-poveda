@@ -15,6 +15,7 @@ import {
   Relax,
   SharedSiteLayout,
   Visit,
+  Error,
 } from "./pages";
 
 const AppLayout = () => (
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
           {
             path: "Contact",
             element: <Contact />,
+          },
+          {
+            path: "*",
+            element: <Error />,
           },
         ],
       },
