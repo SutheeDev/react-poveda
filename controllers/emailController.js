@@ -2,6 +2,7 @@ import { StatusCodes } from "http-status-codes";
 import { BadRequestError } from "../errors/index.js";
 import brevoApi from "sib-api-v3-sdk";
 import validator from "validator";
+import fetch from "node-fetch";
 
 const sendThanksEmail = async (req, res) => {
   const { name, lastname, email, message } = req.body;
@@ -21,6 +22,31 @@ const sendThanksEmail = async (req, res) => {
 
   const apiInstance = new brevoApi.TransactionalEmailsApi();
 
+  const url = "https://api.brevo.com/v3/contacts";
+  const options = {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      "api-key": process.env.BREVO_API_KEY,
+    },
+    body: JSON.stringify({
+      attributes: {
+        FIRSTNAME: name,
+        LASTNAME: lastname,
+        MESSAGE: message,
+      },
+      updateEnabled: true,
+      email: email,
+      listId: [2],
+    }),
+  };
+
+  fetch(url, options)
+    .then((res) => res.json())
+    .then((json) => console.log(json))
+    .catch((err) => console.error("error:" + err));
+
   const sender = {
     email: process.env.SENDER_EMAIL,
     name: "SutheeDev",
@@ -28,6 +54,7 @@ const sendThanksEmail = async (req, res) => {
 
   const receivers = [
     {
+      name: name,
       email: email,
     },
   ];
@@ -35,7 +62,7 @@ const sendThanksEmail = async (req, res) => {
   const data = await apiInstance.sendTransacEmail({
     sender,
     to: receivers,
-    templateId: 1,
+    templateId: 2,
     subject: "Thanks for your message!",
   });
 
