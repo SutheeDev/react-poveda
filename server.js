@@ -8,6 +8,9 @@ import morgan from "morgan";
 
 // Security import
 import cors from "cors";
+import helmet from "helmet";
+import xss from "xss-clean";
+import mongoSanitize from "express-mongo-sanitize";
 
 // Routes import
 import emailRouter from "./routes/emailRoutes.js";
@@ -24,6 +27,9 @@ if (process.env.NODE_ENV !== "production") {
 app.use(express.json());
 
 app.use(cors());
+app.use(helmet());
+app.use(xss());
+app.use(mongoSanitize());
 
 // API routes
 app.use("/api/v1/email", emailRouter);
