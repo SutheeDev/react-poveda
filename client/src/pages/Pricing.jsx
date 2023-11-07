@@ -9,9 +9,6 @@ import {
 } from "../components";
 import imgUrl from "../assets/images/HERO_07_PRICING.jpg";
 
-// Delete later
-import imgAr1 from "../assets/images/AR_HOME_01.jpg";
-
 const Pricing = () => {
   return (
     <Wrapper>
