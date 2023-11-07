@@ -7,3 +7,4 @@ export { default as Landing } from "./Landing";
 export { default as Pricing } from "./Pricing";
 export { default as Relax } from "./Relax";
 export { default as Visit } from "./Visit";
+export { default as Error } from "./Error";
