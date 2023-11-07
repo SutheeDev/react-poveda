@@ -3,6 +3,7 @@ import { Button } from "../components";
 // import { BiX } from "react-icons/bi";
 import { useState, useReducer } from "react";
 import { Alert } from "../components";
+import axios from "axios";
 
 const initialState = {
   msg: "",
@@ -42,23 +43,34 @@ const Form = () => {
   const [message, setMessage] = useState("");
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!name || !email || !message) {
-      dispatch({ type: "ALERT_ERROR" });
-      setTimeout(() => {
-        dispatch({ type: "ALERT_CLOSE" });
-      }, 2500);
-      return;
+
+    try {
+      console.log(name);
+      const { data } = await axios.post("/api/v1/email/", {
+        name,
+      });
+      console.log(data);
+    } catch (error) {
+      console.log(error);
     }
-    dispatch({ type: "ALERT_SUCCESS" });
-    setTimeout(() => {
-      setName("");
-      setLastName("");
-      setEmail("");
-      setMessage("");
-      dispatch({ type: "ALERT_CLOSE" });
-    }, 2500);
+
+    // if (!name || !email || !message) {
+    //   dispatch({ type: "ALERT_ERROR" });
+    //   setTimeout(() => {
+    //     dispatch({ type: "ALERT_CLOSE" });
+    //   }, 2500);
+    //   return;
+    // }
+    // dispatch({ type: "ALERT_SUCCESS" });
+    // setTimeout(() => {
+    //   setName("");
+    //   setLastName("");
+    //   setEmail("");
+    //   setMessage("");
+    //   dispatch({ type: "ALERT_CLOSE" });
+    // }, 2500);
   };
 
   return (
