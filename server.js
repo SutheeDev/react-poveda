@@ -6,6 +6,9 @@ dotenv.config();
 import "express-async-errors";
 import morgan from "morgan";
 
+// Security import
+import cors from "cors";
+
 // Routes import
 import emailRouter from "./routes/emailRoutes.js";
 
@@ -19,6 +22,8 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 app.use(express.json());
+
+app.use(cors({ origin: "http://localhost:5173" }));
 
 // API routes
 app.use("/api/v1/email", emailRouter);
