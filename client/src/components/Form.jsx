@@ -15,7 +15,7 @@ const reducer = (state, action) => {
     return {
       ...state,
       msg: action.payload.msg,
-      alertType: "warning",
+      alertType: "error",
       showAlert: true,
     };
   } else if (action.type === "ALERT_SUCCESS") {
@@ -63,7 +63,7 @@ const Form = () => {
       setTimeout(() => {
         resetState();
         dispatch({ type: "ALERT_CLOSE" });
-      }, 2500);
+      }, 2300);
     } catch (error) {
       dispatch({
         type: "ALERT_ERROR",
@@ -73,18 +73,20 @@ const Form = () => {
       });
       setTimeout(() => {
         dispatch({ type: "ALERT_CLOSE" });
-      }, 2500);
+      }, 2300);
     }
   };
 
   return (
     <Wrapper>
-      <div className={state.showAlert ? "alert display" : "alert"}>
-        <Alert
-          alertType={state.alertType}
-          msg={state.msg}
-          dispatch={dispatch}
-        />
+      <div
+        className={
+          state.showAlert
+            ? `alert display ${state.alertType}`
+            : `alert ${state.alertType}`
+        }
+      >
+        <Alert alertType={state.alertType} msg={state.msg} />
       </div>
       <form action="submit" className="form" onSubmit={handleSubmit}>
         <div className="form-rows">
@@ -184,7 +186,9 @@ const Wrapper = styled.div`
     z-index: 1;
     transform: translateY(0%);
   }
-
+  .alert.error {
+    background-color: var(--alert-warning);
+  }
   .form {
     width: 100%;
     padding-bottom: 3em;

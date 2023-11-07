@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Alert = ({ alertType, msg, dispatch }) => {
+const Alert = ({ alertType, msg }) => {
   return (
     <Wrapper className="alert-content">
       <div className="alert-info">
