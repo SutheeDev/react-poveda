@@ -25,7 +25,7 @@ Welcome to [Poveda](https://poveda.onrender.com/), a project designed to showcas
   - [Package](#package)
   - [Button](#button)
 - [Technologies Used](#technologies-used)
-- [Feedback](#feedback)
+- [Feedback](#suggestion)
   <br><br>
 
 ## Site <a name="site"></a>
@@ -100,7 +100,7 @@ This website includes a set of crafted components, each meticulously designed to
 ### Hero <a name='hero'></a>
 
 - Displays different titles on stunning background images for each page.
-- On the Home page, the Hero also consists of info and a button directly navigated to the [Pricing](#pricing) page.
+- On the [Home](#home) page, the Hero also consists of info and a button directly navigated to the [Pricing](#pricing) page.
 
 ### Gallery <a name='gallery'></a>
 
@@ -110,7 +110,6 @@ This website includes a set of crafted components, each meticulously designed to
 ### Article <a name='article'></a>
 
 - Provides page-related information about Bali, including images.
-- The title, information, button text, background, and text color can be easily altered.
 - Created to promote effortless customization of textual content, images, and colors.
 - Allows an alternative layout setup on a big screen to automatically position the image on the left or right row.
 
@@ -168,6 +167,6 @@ The Poveda website was created using various technologies to ensure a smooth and
 - react-router-dom
   <br><br>
 
-## Feedback <a name='feedback'></a>
+## Feedback <a name='suggestion'></a>
 
 Feedback to improve the Poveda project is welcome. If you have any suggestions or would like to collaborate, please get in touch with me on GitHub.
