@@ -53,7 +53,7 @@ const Form = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/v1/email/", {
+      await axios.post("https://poveda.onrender.com/api/v1/email/", {
         name,
         lastName,
         email,
