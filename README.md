@@ -145,28 +145,16 @@ This website includes a set of crafted components, each meticulously designed to
 
 The Poveda website was created using various technologies to ensure a smooth and practical user experience. Some of the key technologies used in this project include:
 
-- React
-- NodeJS
-- Express
-- Mongoose
-- Styled-components
-- Axios
-- SwiperJS
-- Concurrently
-- Render.com
-- Dotenv
-- Helmet
-- http-status-codes
-- Morgan
-- validator.js
-- xss-clean
-- express-async-errors
-- express-mongo-sanitize
-- MongoDB
-- react-icons
-- react-router-dom
-  <br><br>
+| **Frontend**     | **Backend**          | **Security**           | **Utility**  | **Deployment** |
+| :--------------- | :------------------- | :--------------------- | :----------- | :------------- |
+| React            | NodeJS               | cors                   | Axios        | Render.com     |
+| Style-components | Express              | helmet                 | Concurrently |                |
+| SwiperJS         | express-async-errors | xss-clean              | Dotenv       |                |
+| react-router-dom | Morgan               | express-mongo-sanitize | ValidatorJS  |                |
+| react-icons      | http-status-codes    |                        |              |                |
+
+<br><br>
 
 ## Feedback <a name='suggestion'></a>
 
-Feedback to improve the Poveda project is welcome. If you have any suggestions or would like to collaborate, please get in touch with me on GitHub.
+Feedback to improve the Poveda project is welcome. If you have any suggestions or would like to collaborate, please get in touch with me on GitHub profile. Thanks!
