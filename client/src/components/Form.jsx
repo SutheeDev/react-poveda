@@ -21,7 +21,7 @@ const reducer = (state, action) => {
   } else if (action.type === "ALERT_SUCCESS") {
     return {
       ...state,
-      msg: "We've gotten your message. Thank you so much for reaching out!",
+      msg: "Thank you so much for your message, please check your email!",
       alertType: "success",
       showAlert: true,
     };
