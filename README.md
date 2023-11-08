@@ -7,7 +7,7 @@ Welcome to [Poveda](https://poveda.onrender.com/), a project designed to showcas
 
 - [Site](#site)
   - [Home](#home)
-  - [About Us](#aboutus)
+  - [About Us](#about-us)
   - [Visit](#visit)
   - [Pricing](#pricing)
   - [Contact](#contact)
@@ -33,7 +33,7 @@ Welcome to [Poveda](https://poveda.onrender.com/), a project designed to showcas
 Poveda is a travel website that captures the beauty and uniqueness of Bali through a minimalistic design. It offers comprehensive information about Bali's culture, activities, attractions, and more. The website consists of five main pages:
 
 - [Home](#home)
-- [About Us](#aboutus)
+- [About Us](#about-us)
 - [Visit](#visit)
 - [Pricing](#pricing)
 - [Contact](#contact)
