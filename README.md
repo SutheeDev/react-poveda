@@ -47,15 +47,15 @@ Poveda is a travel website that captures the beauty and uniqueness of Bali throu
 
 ### About Us <a name='about-us'></a>
 
-![About Us Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/About%20us%20page.png)
-<br>
+<!-- ![About Us Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/About%20us%20page.png)
+<br> -->
 
 - The About Us page tells the story of the site owners and how they fell in love with Bali.
 
 ### Visit <a name='visit'></a>
 
-![Visit Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Visit%20page.png)
-<br>
+<!-- ![Visit Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Visit%20page.png)
+<br> -->
 
 - The Visit page serves as an introduction to three sub-pages: [Adventure](#adventure), [Culture](#culture), and [Relax](#relax), providing detailed information about Bali.
 - The Navbar includes a down-arrow icon that opens a dropdown menu with links to the sub-pages mentioned above.
@@ -74,15 +74,15 @@ Poveda is a travel website that captures the beauty and uniqueness of Bali throu
 
 ### Pricing <a name='pricing'></a>
 
-![Pricing Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Pricing%20page.png)
-<br>
+<!-- ![Pricing Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Pricing%20page.png)
+<br> -->
 
 - The Pricing page presents details and prices of tour packages available.
 
 ### Contact <a name='contact'></a>
 
-![Contact Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Contact%20page.png)
-<br>
+<!-- ![Contact Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Contact%20page.png)
+<br> -->
 
 - The Contact page includes a contact [form](#form) and alternative ways to reach the agency, such as an address, business email, and phone number.
 
@@ -127,6 +127,9 @@ The website maintains consistent elements across all pages, including the logo, 
 This website includes a set of crafted components, each meticulously designed to facilitate effortless customization of textual content, images, and colors. They have been used throughout the pages to maintain consistent layouts and designs. These purpose-built components include:
 
 ### Hero <a name='hero'></a>
+
+![About Us Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/About%20us%20page.png)
+<br>
 
 - Displays different titles on stunning background images for each page.
 - On the [Home](#home) page, the Hero also consists of info and a button directly navigated to the [Pricing](#pricing) page.
