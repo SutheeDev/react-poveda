@@ -1,9 +1,9 @@
 # Poveda
 
-Welcome to [Poveda](https://poveda.onrender.com/), a project designed to showcase my front-end development skills. Poveda is a responsive Bali travel agency website with a simple yet beautiful design and a range of functionalities. This README will provide an overview of the project, its features, and the technologies used.
+![Home Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Home.png)
 <br><br>
 
-![Home Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Home.png)
+Welcome to [Poveda](https://poveda.onrender.com/), a project designed to showcase my front-end development skills. Poveda is a responsive Bali travel agency website with a simple yet beautiful design and a range of functionalities. This README will provide an overview of the project, its features, and the technologies used.
 <br><br>
 
 ## Table of Contents
