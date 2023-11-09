@@ -3,6 +3,9 @@
 Welcome to [Poveda](https://poveda.onrender.com/), a project designed to showcase my front-end development skills. Poveda is a responsive Bali travel agency website with a simple yet beautiful design and a range of functionalities. This README will provide an overview of the project, its features, and the technologies used.
 <br><br>
 
+![Home Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Home.png)
+<br><br>
+
 ## Table of Contents
 
 - [Site](#site)
@@ -44,9 +47,15 @@ Poveda is a travel website that captures the beauty and uniqueness of Bali throu
 
 ### About Us <a name='about-us'></a>
 
+![About Us Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/About%20us%20page.png)
+<br><br>
+
 - The About Us page tells the story of the site owners and how they fell in love with Bali.
 
 ### Visit <a name='visit'></a>
+
+![Visit Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Visit%20page.png)
+<br><br>
 
 - The Visit page serves as an introduction to three sub-pages: [Adventure](#adventure), [Culture](#culture), and [Relax](#relax), providing detailed information about Bali.
 - The Navbar includes a down-arrow icon that opens a dropdown menu with links to the sub-pages mentioned above.
@@ -65,9 +74,15 @@ Poveda is a travel website that captures the beauty and uniqueness of Bali throu
 
 ### Pricing <a name='pricing'></a>
 
+![Pricing Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Pricing%20page.png)
+<br><br>
+
 - The Pricing page presents details and prices of tour packages available.
 
 ### Contact <a name='contact'></a>
+
+![Contact Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Contact%20page.png)
+<br><br>
 
 - The Contact page includes a contact [form](#form) and alternative ways to reach the agency, such as an address, business email, and phone number.
 
@@ -82,12 +97,25 @@ The website maintains consistent elements across all pages, including the logo, 
 
 ### Navbar <a name='navbar'></a>
 
+![Navbar on big screen](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486980/ReadMe-Images/Poveda/Navbar%20on%20big%20screen.png)
+<br><br>
+
 - Remains conveniently visible, ensuring easy navigation without the need to scroll to the top.
 - Features a responsive design for mobile and desktop screens.
+
+![Navbar on small screen](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486983/ReadMe-Images/Poveda/Navbar%20on%20small%20screen.png)
+<br><br>
+
 - Includes a down-arrow icon that opens a dropdown menu with links to [Adventure](#adventure), [Culture](#culture), and [Relax](#relax) pages.
 - The menu and dropdown menu are automatically hidden when the page is scrolled or resized.
 
+![Dropdown Menu](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Dropdown%20Menu%20-%20Sub-pages.png)
+<br><br>
+
 ### Footer <a name='footer'></a>
+
+![Footer](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486981/ReadMe-Images/Poveda/Footer%20Component.png)
+<br><br>
 
 - Displays links to all main pages for easy navigation.
 - Includes social media links.
@@ -104,10 +132,16 @@ This website includes a set of crafted components, each meticulously designed to
 
 ### Gallery <a name='gallery'></a>
 
+![Gallery Component](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486981/ReadMe-Images/Poveda/Gallery%20Component.png)
+<br><br>
+
 - Displays multiple images and links to various sub-pages or links to Instagram.
 - Developed to simplify customization of textual content, images, and colors.
 
 ### Article <a name='article'></a>
+
+![Article Component](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486983/ReadMe-Images/Poveda/Article%20Component.png)
+<br><br>
 
 - Provides page-related information about Bali, including images.
 - Created to promote effortless customization of textual content, images, and colors.
@@ -115,10 +149,16 @@ This website includes a set of crafted components, each meticulously designed to
 
 ### Testimonial <a name='testimonial'></a>
 
+![Testimonial Component](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486982/ReadMe-Images/Poveda/Testimonial%20Component.png)
+<br><br>
+
 - Display testimonials on an auto-play interactive carousel with click-and-drag functionalities allowing users to interact with.
 - Allows easy customization for textual content and colors.
 
 ### Form <a name='form'></a>
+
+![Form Component](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486982/ReadMe-Images/Poveda/Form%20Component.png)
+<br><br>
 
 - Allows users to submit queries or messages.
 - Includes email validation to check whether the input is an email and provides an error message if it is not.
@@ -128,10 +168,16 @@ This website includes a set of crafted components, each meticulously designed to
 
 ### Message <a name='message'></a>
 
+![Message Component](https://res.cloudinary.com/dnc7potxo/image/upload/v1699488092/ReadMe-Images/Poveda/Message_Component_bj09qw.png)
+<br><br>
+
 - Provides general information on each page.
 - Developed to enable straightforward modification of textual content and colors.
 
 ### Package <a name='package'></a>
+
+![Package Component](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486981/ReadMe-Images/Poveda/Package%20Component.png)
+<br><br>
 
 - Displays pricing and short information for tour packages available.
 - The textual content, pricing, and colors can effortlessly be modified.
