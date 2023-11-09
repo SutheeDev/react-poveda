@@ -76,7 +76,7 @@ Poveda is a travel website that captures the beauty and uniqueness of Bali throu
 
 ### Additional Page <a name='additional-page'></a>
 
-![404 Error Page](#https://res.cloudinary.com/dnc7potxo/image/upload/v1699539506/ReadMe-Images/Poveda/404_s9bu8r.png)
+![404 Error Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699539506/ReadMe-Images/Poveda/404_s9bu8r.png)
 
 Users will be gracefully redirected to the Error page in case they attempt to access a non-existent page on the website. A Home button and Navbar are provided for easy navigation back to the website.
 <br><br>
