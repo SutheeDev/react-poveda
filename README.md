@@ -47,18 +47,12 @@ Poveda is a travel website that captures the beauty and uniqueness of Bali throu
 
 ### About Us <a name='about-us'></a>
 
-<!-- ![About Us Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/About%20us%20page.png)
-<br> -->
-
 - The About Us page tells the story of the site owners and how they fell in love with Bali.
 
 ### Visit <a name='visit'></a>
 
-<!-- ![Visit Page](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Visit%20page.png)
-<br> -->
-
 - The Visit page serves as an introduction to three sub-pages: [Adventure](#adventure), [Culture](#culture), and [Relax](#relax), providing detailed information about Bali.
-- The Navbar includes a down-arrow icon that opens a dropdown menu with links to the sub-pages mentioned above.
+- The Navbar includes a [down-arrow icon](#down-arrow) that opens a dropdown menu with links to the sub-pages mentioned above.
 
 #### Adventure <a name='adventure'></a>
 
@@ -106,7 +100,7 @@ The website maintains consistent elements across all pages, including the logo, 
 ![Navbar on small screen](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486983/ReadMe-Images/Poveda/Navbar%20on%20small%20screen.png)
 <br>
 
-- Includes a down-arrow icon that opens a dropdown menu with links to [Adventure](#adventure), [Culture](#culture), and [Relax](#relax) pages.
+- Includes a down arrow icon <a name='down-arrow'></a> that opens a dropdown menu with links to [Adventure](#adventure), [Culture](#culture), and [Relax](#relax) pages.
 
 ![Dropdown Menu](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Dropdown%20Menu%20-%20Sub-pages.png)
 <br><br>
