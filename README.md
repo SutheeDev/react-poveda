@@ -107,10 +107,11 @@ The website maintains consistent elements across all pages, including the logo, 
 <br>
 
 - Includes a down-arrow icon that opens a dropdown menu with links to [Adventure](#adventure), [Culture](#culture), and [Relax](#relax) pages.
-- The menu and dropdown menu are automatically hidden when the page is scrolled or resized.
 
 ![Dropdown Menu](https://res.cloudinary.com/dnc7potxo/image/upload/v1699486979/ReadMe-Images/Poveda/Dropdown%20Menu%20-%20Sub-pages.png)
 <br><br>
+
+- The menu and dropdown menu are automatically hidden when the page is scrolled or resized.
 
 ### Footer <a name='footer'></a>
 
